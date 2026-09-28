@@ -300,11 +300,17 @@ a.is-placeholder { cursor: not-allowed; }
 }
 .video__icon::before { content: ""; border-style: solid; border-width: .8rem 0 .8rem 1.3rem; border-color: transparent transparent transparent currentColor; margin-left: .3rem; }
 .video__title { font-family: var(--font-display); font-size: 1.6rem; text-transform: uppercase; margin-top: .75rem; color: var(--black); }
+/* Video singolo a tutta larghezza (sezione nera subito dopo l'hero) */
+.video-section { padding-top: clamp(2rem, 5vw, 4rem); }
+.videos--full { display: block; }
+.videos--full .video__frame { width: 100%; max-height: 100svh; background: #1a1a1a; }
+.videos--full .video__title { color: var(--white); padding: 0 var(--gutter); }
+.video-section .small-print { color: var(--muted-dark); }
 .video__missing { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); padding: 1rem; text-align: center; }
 
 /* ---------- Merch ---------- */
 .merch { display: grid; gap: 2.5rem; align-items: center; }
-.merch__media img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #1a1a1a; }
+.merch__media img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--sketch); }
 .merch__body p { font-size: 1.25rem; max-width: 30rem; margin: 0 0 2rem; }
 .merch__body { order: -1; }
 @media (min-width: 800px) { .merch { grid-template-columns: 1fr 1fr; gap: 5rem; } .merch__body { order: 0; } }

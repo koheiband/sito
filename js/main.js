@@ -259,7 +259,7 @@
     var root = document.getElementById("videos");
     if (!root) return;
     root.textContent = "";
-    C.videos.forEach(function (v) {
+    C.videos.slice(0, 1).forEach(function (v) {
       var frame = el("div", { class: "video__frame" });
       if (isPlaceholder(v.id)) {
         frame.classList.add("is-placeholder");

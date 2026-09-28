@@ -72,9 +72,9 @@
 
     <nav class="site-nav" id="site-nav" data-i18n-attr="aria-label:nav.label" aria-label="Menu principale">
       <ul>
+        <li><a href="#video" data-i18n="nav.video">Video</a></li>
         <li><a href="#musica" data-i18n="nav.music">Musica</a></li>
         <li><a href="#live" data-i18n="nav.live">Live</a></li>
-        <li><a href="#video" data-i18n="nav.video">Video</a></li>
         <li><a href="#merch" data-i18n="nav.merch">Merch</a></li>
         <li><a href="#contatti" data-i18n="nav.contact">Contatti</a></li>
       </ul>
@@ -107,6 +107,18 @@
       </div>
     </section>
 
+    <!-- ============ VIDEO ============ -->
+    <!-- Un solo video a tutta larghezza della pagina. -->
+    <section class="section section--black video-section" id="video" aria-labelledby="video-title">
+      <div class="container">
+        <h2 class="section-title" id="video-title" data-i18n="video.title">Video</h2>
+      </div>
+      <div class="videos videos--full" id="videos"></div>
+      <div class="container">
+        <p class="small-print" data-i18n="video.notice"></p>
+      </div>
+    </section>
+
     <!-- ============ BIO ============ -->
     <section class="section section--paper bio" id="bio" aria-labelledby="bio-title">
       <div class="container bio__grid">
@@ -136,17 +148,8 @@
       </div>
     </section>
 
-    <!-- ============ VIDEO ============ -->
-    <section class="section section--paper" id="video" aria-labelledby="video-title">
-      <div class="container">
-        <h2 class="section-title" id="video-title" data-i18n="video.title">Video</h2>
-        <div class="videos" id="videos"></div>
-        <p class="small-print" data-i18n="video.notice"></p>
-      </div>
-    </section>
-
     <!-- ============ MERCH ============ -->
-    <section class="section section--black" id="merch" aria-labelledby="merch-title">
+    <section class="section section--paper" id="merch" aria-labelledby="merch-title">
       <div class="container merch">
         <div class="merch__media">
           <img id="merch-img" src="" alt="" width="1200" height="1200" loading="lazy" decoding="async">
@@ -154,7 +157,7 @@
         <div class="merch__body">
           <h2 class="section-title" id="merch-title" data-i18n="merch.title">Merch</h2>
           <p data-i18n="merch.text"></p>
-          <a class="btn btn--invert" id="merch-link" href="#" target="_blank" rel="noopener">
+          <a class="btn btn--solid" id="merch-link" href="#" target="_blank" rel="noopener">
             <span data-i18n="merch.cta">Vai allo store</span>
             <span class="visually-hidden" data-i18n="newTab"></span>
           </a>

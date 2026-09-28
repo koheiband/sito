@@ -88,17 +88,13 @@ window.KOHEI_CONTENT = {
   /* ---------- Video ----------
      id = codice YouTube (la parte dopo "watch?v=").
      thumb = anteprima salvata in locale (niente richieste a Google finché
-     l'utente non clicca).                                               */
+     l'utente non clicca).
+     Il sito mostra un solo video, a tutta larghezza: il primo della lista.                                               */
   videos: [
     {
       id: "[YOUTUBE_ID_1]",
       title: "[TITOLO_VIDEO_1]",
       thumb: "assets/img/[THUMB_VIDEO_1].webp"
-    },
-    {
-      id: "[YOUTUBE_ID_2]",
-      title: "[TITOLO_VIDEO_2]",
-      thumb: "assets/img/[THUMB_VIDEO_2].webp"
     }
   ],
 

@@ -52,7 +52,7 @@ Un valore `null` nasconde l'elemento.
 | `[COVER_PLUNGE]` + alt | js/content.js | Copertina EP Plunge |
 | `[DATA_USCITA_PLUNGE]` | js/content.js | Data uscita, formato `AAAA-MM-GG` |
 | `[LINK_BANDCAMP_PLUNGE]` | js/content.js | Link Bandcamp dell'EP |
-| `[YOUTUBE_ID_n]`, `[TITOLO_VIDEO_n]`, `[THUMB_VIDEO_n]` | js/content.js | Video |
+| `[YOUTUBE_ID_1]`, `[TITOLO_VIDEO_1]`, `[THUMB_VIDEO_1]` | js/content.js | Video |
 | `[LINK_STORE_MERCH]`, `[FOTO_MERCH]` + alt | js/content.js | Store esterno e foto |
 | `[BREVO_FORM_ACTION_URL]` | js/content.js | URL del modulo Brevo |
 | Righe `placeholder: true` | js/live.js | Da cancellare quando ci sono date reali |
@@ -67,7 +67,7 @@ Tutte in **WebP** (qualità 75–85), salvo diversa indicazione.
 | File | Dimensioni | Note |
 |---|---|---|
 | `cover-<titolo>-1200.webp` + `cover-<titolo>-600.webp` | 1200×1200 e 600×600 | Copertine. Con questi nomi il sito usa da solo la versione piccola su mobile |
-| `thumb-video-n.webp` | 1280×720 | Anteprima video (fotogramma salvato in locale) |
+| `thumb-video-1.webp` | 1920×1080 | Anteprima del video (fotogramma salvato in locale), mostrata a tutta larghezza |
 | `merch.webp` | 1200×1200 | Foto merch, fondo scuro o neutro |
 | (hero) | — | Usa la copertina di Everything Looks Real (già presente) |
 | `og-image.jpg` | 1200×630 JPG | Anteprima condivisione social (già presente) |
