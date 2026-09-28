@@ -174,18 +174,28 @@
     });
   }
 
-  /* ---------- Hero ---------- */
-  function renderHero() {
-    var a = document.getElementById("featured-link");
-    if (!a || !C.featured) return;
-    a.textContent = loc(C.featured.label);
-    a.href = C.featured.href;
-    if (/^https?:/.test(C.featured.href)) {
-      a.target = "_blank"; a.rel = "noopener";
-      a.appendChild(el("span", { class: "visually-hidden", text: " " + t("newTab") }));
-    }
-    var k = document.getElementById("featured-kicker");
-    if (k) k.textContent = loc(C.featured.kicker);
+  function slug(s) { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
+
+  /* ---------- News ---------- */
+  function renderNews() {
+    var root = document.getElementById("news-list");
+    if (!root) return;
+    root.textContent = "";
+    var list = (C.news || []).slice().sort(function (a, b) { return (a.date || "") < (b.date || "") ? 1 : -1; });
+    document.getElementById("news").hidden = !list.length;
+    list.forEach(function (n) {
+      var link = null;
+      if (n.link && n.link.href) {
+        link = /^https?:/.test(n.link.href) ? extLink(n.link.href, loc(n.link.label), "news-item__link")
+                                           : el("a", { class: "news-item__link", href: n.link.href, text: loc(n.link.label) + " ↓" });
+      }
+      root.appendChild(el("article", { class: "news-item" }, [
+        isISODate(n.date) ? el("time", { class: "news-item__date", datetime: n.date, text: fmtDate(n.date, { day: "2-digit", month: "2-digit", year: "numeric" }) }) : null,
+        el("h3", { class: "news-item__title", text: loc(n.title) }),
+        el("p", { class: "news-item__text", text: loc(n.text) }),
+        link
+      ]));
+    });
   }
 
   /* ---------- Musica ---------- */
@@ -223,15 +233,25 @@
         body.appendChild(el("p", { class: "release__tracks-label", text: t("music.tracklist") }));
         body.appendChild(el("ol", { class: "release__tracks" }, r.tracks.map(function (tr) { return el("li", { text: tr }); })));
       }
-      var links = (r.links || []).filter(function (l) { return l.url; });
+      // presave solo prima dell'uscita; url null = bottone non cliccabile
+      var links = (r.links || []).filter(function (l) { return !(l.presave && !st.upcoming); });
       if (links.length) {
         var box = el("div", { class: "release__links", role: "group", "aria-label": t("music.listen") + " — " + r.title });
-        links.forEach(function (l) { box.appendChild(extLink(l.url, l.name, "btn btn--small")); });
+        links.forEach(function (l) {
+          if (l.url) {
+            box.appendChild(extLink(l.url, l.name, "btn btn--small" + (l.presave ? " btn--presave" : "")));
+          } else {
+            var when = isISODate(r.date) ? t("music.availableFrom") + " " + fmtDate(r.date, { day: "numeric", month: "long" }) : t("music.soon");
+            box.appendChild(el("span", { class: "btn btn--small is-disabled", "aria-disabled": "true", title: when }, [
+              l.name, el("span", { class: "visually-hidden", text: " — " + when })
+            ]));
+          }
+        });
         body.appendChild(box);
       }
       var cover = img(r.cover, r.coverAlt, 1200, 1200);
       cover.classList.add("release__cover");
-      root.appendChild(el("article", { class: "release" }, [
+      root.appendChild(el("article", { class: "release", id: slug(r.title) }, [
         el("figure", { class: "release__figure" }, [cover, r.credit ? el("figcaption", null, [creditLine(r.credit)]) : null]),
         body
       ]));
@@ -434,7 +454,7 @@
   function renderAll() {
     applyStaticTexts();
     if (C) {
-      renderHero(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderContacts(); renderCredits();
+      renderNews(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderContacts(); renderCredits();
     }
     updateLangLinks();
     var y = document.getElementById("year");

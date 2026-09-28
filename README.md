@@ -30,6 +30,9 @@ Pubblicato con GitHub Pages sul dominio `kohei.it`.
 ## Come aggiornare i contenuti
 
 - **Link, uscite, video, merch**: modifica `js/content.js`.
+- **News**: modifica `js/content.js`, voce `news` (la più recente in cima). La sezione compare subito sotto l'hero.
+- **Presave e piattaforme**: nelle uscite, un link con `presave: true` compare solo prima della data di uscita;
+  `url: null` mostra il bottone della piattaforma non cliccabile ("Disponibile dal …").
 - **Date live**: modifica `js/live.js`. Aggiungi una riga per concerto (`date` nel formato `AAAA-MM-GG`).
   Dal giorno dopo il concerto la data passa da sola nell'archivio "Date passate".
 - **Testi (bio, etichette)**: modifica `js/i18n.js`, blocco `it` e blocco `en`.

@@ -52,16 +52,23 @@ window.KOHEI_CONTENT = {
     }
   },
 
-  /* ---------- In evidenza nell'hero ---------- */
-  /* href: link del presave (es. Spotify / DistroKid). Finché manca, porta alla sezione Musica.
-     Un link esterno si apre in una nuova scheda. */
-  featured: {
-    kicker: { it: "Nuovo singolo · 16.10.2026", en: "New single · 16.10.2026" },
-    label: { it: "Graphene Cult — Presave", en: "Graphene Cult — Presave" },
-    href: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release"
-  },
+  /* ---------- News (sezione subito sotto l'hero) ----------
+     La più recente va in cima. date = giorno di pubblicazione della notizia.
+     link.href può puntare a una sezione del sito (es. "#graphene-cult")
+     o a un sito esterno.                                                     */
+  news: [
+    {
+      date: "2026-09-28",
+      title: { it: "Graphene Cult, il nuovo singolo, esce il 16 ottobre",
+               en: "New single Graphene Cult is out on 16 October" },
+      text: { it: "Il 16 ottobre 2026 esce Graphene Cult, primo singolo dall'album di debutto Everything Looks Real. Fai il presave per ascoltarlo appena esce.",
+              en: "Graphene Cult, the first single from the debut album Everything Looks Real, is out on 16 October 2026. Pre-save it to hear it the moment it drops." },
+      link: { label: { it: "Vai al singolo e fai il presave", en: "Go to the single and pre-save" }, href: "#graphene-cult" }
+    }
+  ],
 
   /* ---------- Musica ----------
+     id della scheda = titolo in minuscolo con trattini (es. "#graphene-cult").
      cover: se il file finisce con "-1200.webp", il sito usa in automatico
             anche la versione "-600.webp" sugli schermi piccoli.
      date: "AAAA-MM-GG" → prima di quel giorno compare "In uscita il …",
@@ -78,10 +85,14 @@ window.KOHEI_CONTENT = {
       },
       tracks: [],
       credit: "artwork",
-      // Dopo l'uscita: sostituire con i link diretti al singolo
+      /* presave: true → il bottone compare solo prima della data di uscita.
+         url: null → bottone visibile ma non cliccabile ("Disponibile dal …").
+         Dopo l'uscita: inserire i link diretti al singolo al posto di null. */
       links: [
-        { name: "Bandcamp", url: "https://kohei.bandcamp.com" },
-        { name: "Spotify",  url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" }
+        { name: "Presave",    url: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release", presave: true },
+        { name: "Spotify",    url: null },
+        { name: "Bandcamp",   url: null },
+        { name: "SoundCloud", url: null }
       ]
     },
     {
