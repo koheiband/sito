@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>KŌHEI</title>
-  <meta name="description" content="KŌHEI: noise rock nato ai piedi dell'Etna. Musica, date live, video, merch e contatti.">
+  <meta name="description" content="KŌHEI: trio alt-rock dell'area etnea, suono ruvido e dissonante, testi sul lato oscuro della modernità.">
   <link rel="canonical" href="https://kohei.it/">
   <link rel="alternate" hreflang="it" href="https://kohei.it/">
   <link rel="alternate" hreflang="en" href="https://kohei.it/?lang=en">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KŌHEI">
   <meta property="og:title" content="KŌHEI">
-  <meta property="og:description" content="Noise rock dall'Etna. Musica, live, video, merch.">
+  <meta property="og:description" content="Trio alt-rock dell'area etnea: suono ruvido e dissonante, testi sul lato oscuro della modernità.">
   <meta property="og:url" content="https://kohei.it/">
   <meta property="og:image" content="https://kohei.it/assets/img/og-image.jpg">
   <meta property="og:image:width" content="1200">
@@ -25,7 +25,7 @@
   <meta property="og:locale:alternate" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="KŌHEI">
-  <meta name="twitter:description" content="Noise rock dall'Etna. Musica, live, video, merch.">
+  <meta name="twitter:description" content="Trio alt-rock dell'area etnea: suono ruvido e dissonante, testi sul lato oscuro della modernità.">
   <meta name="twitter:image" content="https://kohei.it/assets/img/og-image.jpg">
 
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -45,7 +45,7 @@
     "@type": "MusicGroup",
     "name": "KŌHEI",
     "url": "https://kohei.it/",
-    "genre": "Noise rock",
+    "genre": ["Alternative rock", "Noise rock", "Post-punk"],
     "image": "https://kohei.it/assets/img/og-image.jpg",
     "email": "band.kohei@gmail.com",
     "sameAs": [
@@ -109,7 +109,10 @@
                width="1200" height="1200" fetchpriority="high"
                alt="" data-i18n-attr="alt:hero.alt">
         </figure>
-        <a class="btn btn--invert" id="featured-link" href="#musica"></a>
+        <div class="featured">
+          <p class="featured__kicker" id="featured-kicker"></p>
+          <a class="btn btn--featured" id="featured-link" href="#musica"></a>
+        </div>
       </div>
     </section>
 
@@ -128,7 +131,19 @@
     <section class="section section--paper bio" id="bio" aria-labelledby="bio-title">
       <div class="container bio__grid">
         <h2 class="section-title" id="bio-title" data-i18n="bio.title">Bio</h2>
-        <p class="bio__text" data-i18n="bio.text"></p>
+        <div class="bio__body">
+          <!-- Testi da js/i18n.js (bio.*). Fonte: KOHEI_scheda_e_bio.md e Bio_w.docx sul Drive -->
+          <p class="bio__lead" data-i18n="bio.text"></p>
+          <p data-i18n-html="bio.p1"></p>
+          <p data-i18n-html="bio.p2"></p>
+          <p data-i18n-html="bio.p3"></p>
+          <h3 class="bio__lineup-title" data-i18n="bio.lineup">Formazione</h3>
+          <dl class="bio__lineup">
+            <dt>Andrea Longo</dt><dd data-i18n="bio.role1">voce, chitarra</dd>
+            <dt>Daniele Arcoria</dt><dd data-i18n="bio.role2">basso</dd>
+            <dt>Pietro Santoro</dt><dd data-i18n="bio.role3">batteria</dd>
+          </dl>
+        </div>
       </div>
     </section>
 

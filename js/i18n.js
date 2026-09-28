@@ -6,7 +6,7 @@
 window.KOHEI_I18N = {
   it: {
     "meta.title": "KŌHEI",
-    "meta.description": "KŌHEI: noise rock nato ai piedi dell'Etna. Musica, date live, video, merch e contatti.",
+    "meta.description": "KŌHEI: trio alt-rock dell'area etnea, suono ruvido e dissonante, testi sul lato oscuro della modernità.",
     "privacy.title": "Privacy e cookie — KŌHEI",
     "privacy.description": "Informativa privacy e cookie del sito kohei.it.",
     "skip": "Vai al contenuto",
@@ -23,6 +23,13 @@ window.KOHEI_I18N = {
     "bio.title": "Bio",
     "bio.text": "Trovati quasi per una coincidenza ai piedi dell'Etna, con ancora nelle budella le atmosfere tetre dei Mogwai. Poche parole, solo un'intesa nata nel rumore. Insieme scavano rifugi di suono, nei boati del vulcano, tra frenesia e riverberi, dove la furia dei Nirvana si contorce nelle visioni distorte dei Verdena, l'impatto fisico dei Metz lacera il caos rituale degli Shellac. Disillusione e catarsi, rovina e resistenza.",
 
+    "bio.p1": "KŌHEI è un trio dell'area etnea che costruisce un suono ruvido e fortemente dissonante. La proposta fonde radici alt-rock con un approccio contemporaneo, alternando ritornelli esplosivi a sezioni strumentali cupe e immersive, in un equilibrio costante fra tensione e impatto emotivo. Le influenze spaziano da Verdena a Metz, passando per Ditz e Shellac. Il risultato è una cifra compatta e fisica, che dal vivo diventa il vero terreno della band.",
+    "bio.p2": "I testi raccontano il lato oscuro della modernità e il rapporto fra tecnologia, potere e identità: la manipolazione algoritmica, il capitalismo estrattivo, il colonialismo, la cultura del consumo, e il modo in cui questi meccanismi svuotano l'individuo della propria libertà. Non c'è un messaggio partitico: c'è l'invito a recuperare spirito critico, autonomia e responsabilità, contro tutto ciò che riduce le persone a risorse.",
+    "bio.p3": "Formatisi nel 2024, i KŌHEI esordiscono nel febbraio 2025 con l'EP <em>Plunge</em> e si costruiscono uno spazio nel circuito underground siciliano: dalla Palestra Lupo di Catania, in apertura agli Stegosauro (marzo 2026), al Mind House di Palermo (maggio 2026), fino allo Zō di Catania per le selezioni di Arezzo Wave (giugno 2026). Ora arriva il primo album, <em>Everything Looks Real</em>: nove tracce, anticipate dal singolo <em>Graphene Cult</em> il 16 ottobre 2026.",
+    "bio.lineup": "Formazione",
+    "bio.role1": "voce, chitarra",
+    "bio.role2": "basso",
+    "bio.role3": "batteria",
     "music.title": "Musica",
     "music.soon": "Prossimamente",
     "music.outOn": "In uscita il",
@@ -67,7 +74,7 @@ window.KOHEI_I18N = {
 
   en: {
     "meta.title": "KŌHEI",
-    "meta.description": "KŌHEI: noise rock born at the foot of Mount Etna. Music, live dates, videos, merch and contacts.",
+    "meta.description": "KŌHEI: an alt-rock trio from the slopes of Mount Etna — raw, dissonant, and pointed at the dark side of modernity.",
     "privacy.title": "Privacy & cookies — KŌHEI",
     "privacy.description": "Privacy and cookie notice for kohei.it.",
     "skip": "Skip to content",
@@ -84,6 +91,13 @@ window.KOHEI_I18N = {
     "bio.title": "Bio",
     "bio.text": "Almost by chance, they crossed paths at the foot of Etna, with Mogwai's eerie vibes still twisting in their guts. No words, just a connection sparked in noise. Together, they carve sound shelters, riding the volcano's roar, caught between chaos and reverb—where Nirvana's raw fury warps into Verdena's hazy visions, Metz's punch collides with Shellac's primal mayhem. Disillusion hits hard, catharsis kicks in. Ruin and resistance, loud as hell.",
 
+    "bio.p1": "KŌHEI are a trio from the Mount Etna area, building a sound that is raw and heavily dissonant. Alt-rock roots meet a contemporary edge: explosive choruses give way to dark, immersive instrumental passages, holding a constant balance between tension and emotional impact. Influences range from Shellac to Verdena, by way of Metz and Ditz. The result is compact, physical, and lands hardest live.",
+    "bio.p2": "Their lyrics examine the dark side of modernity and the relationship between technology, power and identity: algorithmic manipulation, extractive capitalism, colonialism, consumer culture, and the way these forces hollow out individual freedom. Rather than pushing a partisan agenda, the band argues for reclaiming critical thinking, autonomy and responsibility — against everything that reduces people to resources.",
+    "bio.p3": "Formed in 2024, KŌHEI made their debut with the EP <em>Plunge</em> in February 2025 and carved out a place in the Sicilian underground, from Palestra Lupo in Catania, opening for Stegosauro (March 2026), to Mind House in Palermo (May 2026) and Zō in Catania for the Arezzo Wave selections (June 2026). Their first album follows: <em>Everything Looks Real</em>, nine tracks, preceded by the single <em>Graphene Cult</em> on 16 October 2026.",
+    "bio.lineup": "Line-up",
+    "bio.role1": "vocals, guitar",
+    "bio.role2": "bass",
+    "bio.role3": "drums",
     "music.title": "Music",
     "music.soon": "Coming soon",
     "music.outOn": "Out on",

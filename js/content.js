@@ -31,8 +31,11 @@ window.KOHEI_CONTENT = {
   ],
 
   /* ---------- In evidenza nell'hero ---------- */
+  /* href: link del presave (es. Spotify / DistroKid). Finché manca, porta alla sezione Musica.
+     Un link esterno si apre in una nuova scheda. */
   featured: {
-    label: { it: "Graphene Cult — nuovo singolo", en: "Graphene Cult — new single" },
+    kicker: { it: "Nuovo singolo · 16.10.2026", en: "New single · 16.10.2026" },
+    label: { it: "Graphene Cult — Presave", en: "Graphene Cult — Presave" },
     href: "#musica"
   },
 

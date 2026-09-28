@@ -101,6 +101,11 @@
       var v = t(n.getAttribute("data-i18n"));
       if (v) n.textContent = v;
     });
+    // testi con corsivi (<em>) scritti in i18n.js: mai contenuti esterni
+    document.querySelectorAll("[data-i18n-html]").forEach(function (n) {
+      var v = t(n.getAttribute("data-i18n-html"));
+      if (v) n.innerHTML = v;
+    });
     document.querySelectorAll("[data-i18n-attr]").forEach(function (n) {
       n.getAttribute("data-i18n-attr").split(";").forEach(function (pair) {
         var p = pair.split(":");
@@ -155,6 +160,12 @@
     if (!a || !C.featured) return;
     a.textContent = loc(C.featured.label);
     a.href = C.featured.href;
+    if (/^https?:/.test(C.featured.href)) {
+      a.target = "_blank"; a.rel = "noopener";
+      a.appendChild(el("span", { class: "visually-hidden", text: " " + t("newTab") }));
+    }
+    var k = document.getElementById("featured-kicker");
+    if (k) k.textContent = loc(C.featured.kicker);
   }
 
   /* ---------- Musica ---------- */
