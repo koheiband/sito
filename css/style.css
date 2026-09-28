@@ -263,17 +263,9 @@ a.is-placeholder { cursor: not-allowed; }
   .bio__grid { grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start; }
 }
 
-/* ---------- Foto band tra Bio e Musica ----------
-   A tutta larghezza; sfumature in alto e in basso nel colore carta,
-   così la foto si fonde con le sezioni chiare sopra e sotto. */
-.band-photo { position: relative; margin: 0; background: var(--paper); }
+/* ---------- Foto band tra Bio e Musica (a tutta larghezza, senza sfumature) ---------- */
+.band-photo { margin: 0; }
 .band-photo img { display: block; width: 100%; height: auto; max-height: 92svh; object-fit: cover; }
-.band-photo::before,
-.band-photo::after {
-  content: ""; position: absolute; left: 0; right: 0; height: 22%; pointer-events: none;
-}
-.band-photo::before { top: 0; background: linear-gradient(to bottom, var(--paper), rgba(250,250,250,0)); }
-.band-photo::after { bottom: 0; background: linear-gradient(to top, var(--paper), rgba(250,250,250,0)); }
 
 /* ---------- Musica ---------- */
 .releases { display: grid; gap: clamp(3rem, 7vw, 5rem); }
