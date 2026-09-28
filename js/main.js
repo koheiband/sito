@@ -366,12 +366,15 @@
 
   /* ---------- Contatti ---------- */
   function renderContacts() {
-    var box = document.getElementById("contact-emails");
-    if (box) {
-      box.textContent = "";
+    var follow = document.getElementById("contact-follow");
+    if (follow) {
+      var dl = follow.parentNode;
+      dl.querySelectorAll("[data-contact]").forEach(function (n) { n.remove(); });
       C.contacts.filter(function (c) { return c.email; }).forEach(function (c) {
-        box.appendChild(el("dt", { text: loc(c.label) }));
-        box.appendChild(el("dd", null, [el("a", { class: "big-link", href: "mailto:" + c.email, text: c.email })]));
+        var dt = el("dt", { "data-contact": "", text: loc(c.label) });
+        var dd = el("dd", { "data-contact": "" }, [el("a", { class: "big-link", href: "mailto:" + c.email, text: c.email })]);
+        dl.insertBefore(dt, follow);
+        dl.insertBefore(dd, follow);
       });
     }
     var ul = document.getElementById("contact-socials");

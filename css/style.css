@@ -45,6 +45,11 @@
   --header-h: 4rem;
 }
 
+/* Il sito ha già i suoi colori chiari e scuri: dichiararlo evita la
+   "modalità scura forzata" dei browser (Samsung Internet, Chrome Android). */
+:root { color-scheme: dark light; }
+input, button, select, textarea { color-scheme: light; }
+
 /* ---------- Reset essenziale ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
@@ -172,7 +177,8 @@ a.is-placeholder { cursor: not-allowed; }
   visibility: hidden; opacity: 0;
   transition: opacity .2s, visibility .2s;
 }
-.site-header.is-open .site-nav { visibility: visible; opacity: 1; }
+/* all'apertura la visibilità scatta subito (serve per dare il focus al primo link) */
+.site-header.is-open .site-nav { visibility: visible; opacity: 1; transition: opacity .2s, visibility 0s; }
 .site-nav ul { display: flex; flex-direction: column; gap: .25rem; }
 .site-nav a {
   font-family: var(--font-display); text-transform: uppercase; text-decoration: none;
@@ -185,19 +191,21 @@ a.is-placeholder { cursor: not-allowed; }
   position: fixed; z-index: 60;
   top: 0; right: calc(var(--gutter) + 3.75rem);
   height: var(--header-h);
-  display: flex; align-items: center; gap: .6rem;
+  display: flex; align-items: center; gap: .15rem;
 }
 .lang-flags--end { right: var(--gutter); }
 .lang-flag {
-  display: block; padding: 0; border: 0; background: none; cursor: pointer;
-  width: 1.75rem; height: 1.2rem; line-height: 0;
+  display: block; border: 0; background: none; cursor: pointer; line-height: 0;
+  padding: .75rem .3rem;          /* area cliccabile ≥ 44px in altezza */
   opacity: .4; transition: opacity .15s;
+}
+.lang-flag svg {
+  width: 1.75rem; height: 1.2rem; display: block;
   box-shadow: 0 0 0 1px rgba(128,128,128,.6);
 }
-.lang-flag svg { width: 100%; height: 100%; display: block; }
 .lang-flag:hover, .lang-flag.is-active { opacity: 1; }
-.lang-flag.is-active { box-shadow: 0 0 0 2px #808080; }
-.lang-flag:focus-visible { outline: 3px solid #808080; outline-offset: 3px; }
+.lang-flag.is-active svg { box-shadow: 0 0 0 2px #808080; }
+.lang-flag:focus-visible { outline: 3px solid #808080; outline-offset: -2px; }
 
 @media (min-width: 900px) {
   .menu-toggle { display: none; }
@@ -374,7 +382,6 @@ a.is-placeholder { cursor: not-allowed; }
 .contact__list { margin: 0; display: grid; gap: .5rem; }
 .contact__list dt { font-size: .9rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted-dark); margin-top: 1.5rem; }
 .contact__list dd { margin: 0; }
-.contact__emails { display: contents; }
 .big-link {
   font-family: var(--font-display); font-size: clamp(1.6rem, 6.5vw, 4rem); line-height: 1;
   text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em;

@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Il sito gestisce da sé i propri colori: impedisce ai browser (es. Samsung Internet)
+       di scurire in automatico logo, icone e immagini -->
+  <meta name="color-scheme" content="dark light">
+  <meta name="supported-color-schemes" content="dark light">
   <title>KŌHEI</title>
   <meta name="description" content="KŌHEI: trio alt-rock dell'area etnea, suono ruvido e dissonante, testi sul lato oscuro della modernità.">
   <link rel="canonical" href="https://kohei.it/">
@@ -36,7 +40,7 @@
   <link rel="preload" href="assets/img/cover-everything-looks-real-1200.webp" as="image" type="image/webp"
         imagesrcset="assets/img/cover-everything-looks-real-600.webp 600w, assets/img/cover-everything-looks-real-1200.webp 1200w"
         imagesizes="(min-width: 1100px) 64rem, 92vw">
-  <link rel="preload" href="assets/img/logo-kohei.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/img/logo-kohei.webp" as="image" type="image/webp" crossorigin>
   <link rel="stylesheet" href="css/style.css">
 
   <script type="application/ld+json">
@@ -216,8 +220,8 @@
       <div class="container contact">
         <h2 class="section-title" id="contact-title" data-i18n="contact.title">Contatti</h2>
         <dl class="contact__list">
-          <div id="contact-emails" class="contact__emails"></div>
-          <dt data-i18n="contact.follow">Seguici</dt>
+          <!-- le email (dt/dd) vengono inserite qui da js/main.js -->
+          <dt id="contact-follow" data-i18n="contact.follow">Seguici</dt>
           <dd><ul class="socials" id="contact-socials"></ul></dd>
         </dl>
       </div>
