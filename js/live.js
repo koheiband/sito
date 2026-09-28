@@ -14,30 +14,18 @@
      soldOut  true se esaurito        (facoltativo)
      note     testo breve, es. { it: "con [BAND]", en: "w/ [BAND]" } (facoltativo)
 
-   Le due righe qui sotto sono SEGNAPOSTO di esempio (placeholder: true):
-   cancellale quando inserisci le date reali.
    ===================================================================== */
 
 window.KOHEI_LIVE = [
   {
-    placeholder: true,
-    date: "2099-01-01",
-    city: "[CITTÀ]",
+    date: "2026-11-07",
+    city: "Palermo",
     country: "IT",
-    venue: "[LOCALE]",
-    tickets: "[LINK_BIGLIETTI]"
-  },
-  {
-    placeholder: true,
-    date: "2099-01-02",
-    city: "[CITTÀ]",
-    country: "IT",
-    venue: "[LOCALE]",
-    tickets: null,
-    note: { it: "[NOTA, es. con BAND_OSPITE]", en: "[NOTE, e.g. w/ GUEST_BAND]" }
+    venue: "Punk Funk",
+    tickets: null        // inserire il link quando disponibile
   }
 
-  /* Esempio di data reale:
+  /* Esempio per aggiungere un'altra data (togli i commenti e la virgola va prima):
   ,{
     date: "2026-11-21",
     city: "Catania",

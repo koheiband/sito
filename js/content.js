@@ -25,7 +25,7 @@ window.KOHEI_CONTENT = {
   socials: [
     { name: "Instagram",  url: "https://www.instagram.com/kohei.band/" },
     { name: "Bandcamp",   url: "https://kohei.bandcamp.com" },
-    { name: "Spotify",    url: "[LINK_SPOTIFY_ARTISTA]" },
+    { name: "Spotify",    url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" },
     { name: "YouTube",    url: "[LINK_YOUTUBE_CANALE]" },
     { name: "SoundCloud", url: "[LINK_SOUNDCLOUD]" }       // null se non usato
   ],
@@ -46,12 +46,16 @@ window.KOHEI_CONTENT = {
       title: "Graphene Cult",
       type: { it: "Singolo", en: "Single" },
       date: "2026-10-16",
-      cover: "assets/img/[COVER_GRAPHENE_CULT].webp",
-      coverAlt: { it: "[ALT_COVER_GRAPHENE_CULT]", en: "[ALT_COVER_GRAPHENE_CULT]" },
+      cover: "assets/img/cover-graphene-cult-1200.webp",
+      coverAlt: {
+        it: "Copertina di Graphene Cult: illustrazione in bianco e nero di una figura con le corna, avvolta in un maglione di lana irto di spine, che balla su una gamba sola.",
+        en: "Graphene Cult cover: black and white illustration of a horned figure wrapped in a spiky wool sweater, dancing on one leg."
+      },
       tracks: [],
+      // Dopo l'uscita: sostituire con i link diretti al singolo
       links: [
-        { name: "Bandcamp", url: "[LINK_BANDCAMP_GRAPHENE_CULT]" },
-        { name: "Spotify",  url: "[LINK_SPOTIFY_GRAPHENE_CULT]" }
+        { name: "Bandcamp", url: "https://kohei.bandcamp.com" },
+        { name: "Spotify",  url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" }
       ]
     },
     {
@@ -74,12 +78,15 @@ window.KOHEI_CONTENT = {
     {
       title: "Plunge",
       type: { it: "EP", en: "EP" },
-      date: "[DATA_USCITA_PLUNGE]",
-      cover: "assets/img/[COVER_PLUNGE].webp",
-      coverAlt: { it: "[ALT_COVER_PLUNGE]", en: "[ALT_COVER_PLUNGE]" },
+      date: null,           // facoltativo: "AAAA-MM-GG" per mostrare l'anno
+      cover: "assets/img/cover-plunge-1200.webp",
+      coverAlt: {
+        it: "Copertina di Plunge: la sagoma scura di una figura che si tuffa sopra un grande fiore bianco e rosa, con una cornice di scritte nere fitte.",
+        en: "Plunge cover: the dark silhouette of a diving figure above a large white and pink flower, framed by dense black handwriting."
+      },
       tracks: ["Shelter", "Terra Nullius", "Companion"],
       links: [
-        { name: "Bandcamp", url: "[LINK_BANDCAMP_PLUNGE]" },
+        { name: "Bandcamp", url: "https://kohei.bandcamp.com" },
         { name: "Spotify",  url: "https://open.spotify.com/album/3jwid32GA5sReXfTccsNUu" }
       ]
     }
@@ -101,8 +108,11 @@ window.KOHEI_CONTENT = {
   /* ---------- Merch ---------- */
   merch: {
     url: "[LINK_STORE_MERCH]",
-    image: "assets/img/[FOTO_MERCH].webp",
-    imageAlt: { it: "[ALT_FOTO_MERCH]", en: "[ALT_FOTO_MERCH]" }
+    image: "assets/img/merch-tshirt-elr-1200.webp",
+    imageAlt: {
+      it: "Grafica del retro della T-shirt: logo KŌHEI, illustrazione di Everything Looks Real e la scritta EVERYTHING LOOKS REAL.",
+      en: "T-shirt back print: KŌHEI logo, Everything Looks Real illustration and the words EVERYTHING LOOKS REAL."
+    }
   },
 
   /* ---------- Newsletter (Brevo) ----------

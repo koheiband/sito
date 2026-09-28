@@ -44,19 +44,12 @@ Un valore `null` nasconde l'elemento.
 
 | Segnaposto | File | Cosa serve |
 |---|---|---|
-| `[LINK_SPOTIFY_ARTISTA]` | js/content.js | Link al profilo artista Spotify |
 | `[LINK_YOUTUBE_CANALE]` | js/content.js | Link al canale YouTube |
 | `[LINK_SOUNDCLOUD]` | js/content.js | Link SoundCloud, oppure `null` |
-| `[COVER_GRAPHENE_CULT]` + alt | js/content.js | Copertina singolo |
-| `[LINK_BANDCAMP_GRAPHENE_CULT]`, `[LINK_SPOTIFY_GRAPHENE_CULT]` | js/content.js | Link al singolo (dal 16/10) |
-| `[COVER_PLUNGE]` + alt | js/content.js | Copertina EP Plunge |
-| `[DATA_USCITA_PLUNGE]` | js/content.js | Data uscita, formato `AAAA-MM-GG` |
-| `[LINK_BANDCAMP_PLUNGE]` | js/content.js | Link Bandcamp dell'EP |
 | `[YOUTUBE_ID_1]`, `[TITOLO_VIDEO_1]`, `[THUMB_VIDEO_1]` | js/content.js | Video |
-| `[LINK_STORE_MERCH]`, `[FOTO_MERCH]` + alt | js/content.js | Store esterno e foto |
+| `[LINK_STORE_MERCH]` | js/content.js | Link allo store esterno |
 | `[BREVO_FORM_ACTION_URL]` | js/content.js | URL del modulo Brevo |
-| Righe `placeholder: true` | js/live.js | Da cancellare quando ci sono date reali |
-| `[TITOLARE_NOME]`, `[TITOLARE_INDIRIZZO]`, `[TITOLARE_EMAIL]` | privacy.html | Titolare del trattamento |
+| `[TITOLARE_INDIRIZZO]`, `[TITOLARE_EMAIL]` | privacy.html | Recapiti del titolare (Pietro Santoro) |
 | `[SERVIZIO_NEWSLETTER]`, `[DATA_AGGIORNAMENTO]` | privacy.html | Conferma servizio e data |
 | `aileron-regular.woff2`, `aileron-bold.woff2` | assets/fonts/ | Font del testo |
 
