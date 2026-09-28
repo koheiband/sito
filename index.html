@@ -33,9 +33,9 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
   <link rel="preload" href="assets/fonts/futura-display.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/img/hero-900.webp" as="image" type="image/webp"
-        imagesrcset="assets/img/hero-600.webp 600w, assets/img/hero-900.webp 900w, assets/img/hero-1400.webp 1400w"
-        imagesizes="(min-width: 900px) 52vw, 100vw">
+  <link rel="preload" href="assets/img/cover-everything-looks-real-1200.webp" as="image" type="image/webp"
+        imagesrcset="assets/img/cover-everything-looks-real-600.webp 600w, assets/img/cover-everything-looks-real-1200.webp 1200w"
+        imagesizes="(min-width: 1100px) 64rem, 92vw">
   <link rel="preload" href="assets/img/logo-kohei.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="css/style.css">
 
@@ -60,7 +60,7 @@
 
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="KŌHEI — home">
+    <a class="brand brand--home" href="#top" aria-label="KŌHEI — home">
             <span class="logo" aria-hidden="true"></span>
     </a>
 
@@ -87,23 +87,23 @@
 
   <main id="main">
     <!-- ============ HERO ============ -->
+    <!-- Layout: logo grande a tutta larghezza del blocco, sotto la copertina
+         dell'album alla stessa larghezza, su fondo nero. -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero__media">
-        <figure class="hero__frame">
-          <!-- [FOTO_HERO] -->
-          <img src="assets/img/hero-900.webp"
-               srcset="assets/img/hero-600.webp 600w, assets/img/hero-900.webp 900w, assets/img/hero-1400.webp 1400w"
-               sizes="(min-width: 900px) 52vw, 100vw"
-               width="1400" height="1400" fetchpriority="high"
-               alt="" data-i18n-attr="alt:hero.alt">
-        </figure>
-      </div>
-      <div class="hero__content">
+      <div class="hero__inner">
         <h1 class="hero__title" id="hero-title">
           <span class="visually-hidden">KŌHEI</span>
           <span class="logo" aria-hidden="true"></span>
         </h1>
-        <a class="btn btn--solid" id="featured-link" href="#musica"></a>
+        <figure class="hero__cover">
+          <!-- [FOTO_HERO]: copertina di Everything Looks Real -->
+          <img src="assets/img/cover-everything-looks-real-1200.webp"
+               srcset="assets/img/cover-everything-looks-real-600.webp 600w, assets/img/cover-everything-looks-real-1200.webp 1200w"
+               sizes="(min-width: 1100px) 64rem, 92vw"
+               width="1200" height="1200" fetchpriority="high"
+               alt="" data-i18n-attr="alt:hero.alt">
+        </figure>
+        <a class="btn btn--invert" id="featured-link" href="#musica"></a>
       </div>
     </section>
 

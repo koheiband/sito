@@ -69,7 +69,7 @@ Tutte in **WebP** (qualità 75–85), salvo diversa indicazione.
 | `cover-<titolo>-1200.webp` + `cover-<titolo>-600.webp` | 1200×1200 e 600×600 | Copertine. Con questi nomi il sito usa da solo la versione piccola su mobile |
 | `thumb-video-n.webp` | 1280×720 | Anteprima video (fotogramma salvato in locale) |
 | `merch.webp` | 1200×1200 | Foto merch, fondo scuro o neutro |
-| `hero-600/900/1400.webp` | quadrate | Immagine hero (già presenti) |
+| (hero) | — | Usa la copertina di Everything Looks Real (già presente) |
 | `og-image.jpg` | 1200×630 JPG | Anteprima condivisione social (già presente) |
 | `logo-kohei.webp` | 1200 px di larghezza, nero su trasparente | Logo (già presente) |
 
