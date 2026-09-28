@@ -247,7 +247,8 @@
       }
       var cover = img(r.cover, r.coverAlt, 1200, 1200);
       cover.classList.add("release__cover");
-      root.appendChild(el("article", { class: "release", id: slug(r.title) }, [
+      var soon = r.upcoming && !isISODate(r.date);
+      root.appendChild(el("article", { class: "release" + (soon ? " release--soon" : ""), id: slug(r.title) }, [
         el("figure", { class: "release__figure" }, [cover, r.credit ? el("figcaption", null, [creditLine(r.credit)]) : null]),
         body
       ]));

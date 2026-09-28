@@ -271,13 +271,8 @@ a.is-placeholder { cursor: not-allowed; }
 .band-photo img { display: block; width: 100%; height: auto; max-height: 92svh; object-fit: cover; }
 
 /* ---------- Musica ---------- */
-/* artwork di Everything Looks Real in filigrana sullo sfondo della sezione */
-.music-section { position: relative; overflow: hidden; isolation: isolate; }
-.music-section::before {
-  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: url("../assets/img/cover-everything-looks-real-1200.webp") center / cover no-repeat;
-  opacity: .07;
-}
+/* uscita "Prossimamente" (senza data): copertina semitrasparente, per dire che arriverà */
+.release--soon .release__cover { opacity: .35; }
 .releases { display: grid; gap: clamp(3rem, 7vw, 5rem); }
 .release { display: grid; gap: 1.5rem; }
 .release__cover { aspect-ratio: 1; width: 100%; background: var(--sketch); object-fit: cover; }
