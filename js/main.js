@@ -75,7 +75,8 @@
     var q = new URLSearchParams(location.search).get("lang");
     if (LANGS.indexOf(q) > -1) return q;
     try { var s = localStorage.getItem("kohei-lang"); if (LANGS.indexOf(s) > -1) return s; } catch (e) {}
-    return (navigator.language || "it").toLowerCase().indexOf("it") === 0 ? "it" : "en";
+    // Default sempre italiano: l'inglese solo se scelto con la bandiera o con ?lang=en
+    return "it";
   }
   function applyStaticTexts() {
     document.documentElement.lang = lang;
@@ -96,8 +97,10 @@
         n.setAttribute(p[0], t(p[1]));
       });
     });
-    document.querySelectorAll("[data-lang]").forEach(function (n) {
-      n.classList.toggle("is-active", n.getAttribute("data-lang") === lang);
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+      var on = b.getAttribute("data-set-lang") === lang;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", String(on));
     });
     // blocchi di testo lunghi (pagina privacy)
     document.querySelectorAll("[data-lang-block]").forEach(function (n) {
@@ -371,8 +374,8 @@
     renderAll();
     initMenu();
     initNewsletter();
-    document.querySelectorAll("[data-lang-toggle]").forEach(function (b) {
-      b.addEventListener("click", function () { setLang(lang === "it" ? "en" : "it"); });
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+      b.addEventListener("click", function () { setLang(b.getAttribute("data-set-lang")); });
     });
   });
 })();

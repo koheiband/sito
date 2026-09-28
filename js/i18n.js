@@ -19,7 +19,6 @@ window.KOHEI_I18N = {
     "nav.video": "Video",
     "nav.merch": "Merch",
     "nav.contact": "Contatti",
-    "lang.switch": "Switch to English",
 
     "bio.title": "Bio",
     "bio.text": "Trovati quasi per una coincidenza ai piedi dell'Etna, con ancora nelle budella le atmosfere tetre dei Mogwai. Poche parole, solo un'intesa nata nel rumore. Insieme scavano rifugi di suono, nei boati del vulcano, tra frenesia e riverberi, dove la furia dei Nirvana si contorce nelle visioni distorte dei Verdena, l'impatto fisico dei Metz lacera il caos rituale degli Shellac. Disillusione e catarsi, rovina e resistenza.",
@@ -79,7 +78,6 @@ window.KOHEI_I18N = {
     "nav.video": "Video",
     "nav.merch": "Merch",
     "nav.contact": "Contact",
-    "lang.switch": "Passa all'italiano",
 
     "bio.title": "Bio",
     "bio.text": "Almost by chance, they crossed paths at the foot of Etna, with Mogwai's eerie vibes still twisting in their guts. No words, just a connection sparked in noise. Together, they carve sound shelters, riding the volcano's roar, caught between chaos and reverb—where Nirvana's raw fury warps into Verdena's hazy visions, Metz's punch collides with Shellac's primal mayhem. Disillusion hits hard, catharsis kicks in. Ruin and resistance, loud as hell.",

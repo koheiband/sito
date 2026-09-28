@@ -180,14 +180,24 @@ a.is-placeholder { cursor: not-allowed; }
 }
 .site-nav a:hover { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .1em; }
 
-.lang-switch {
-  align-self: flex-start;
-  border: 0; background: none; cursor: pointer; padding: .5rem 0;
-  font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .05em;
-  display: flex; gap: .35rem;
+/* Selettore lingua a bandiere (fisso in alto a destra, sopra l'header) */
+.lang-flags {
+  position: fixed; z-index: 60;
+  top: 0; right: calc(var(--gutter) + 3.75rem);
+  height: var(--header-h);
+  display: flex; align-items: center; gap: .6rem;
 }
-.lang-switch [data-lang] { opacity: .45; }
-.lang-switch [data-lang].is-active { opacity: 1; text-decoration: underline; text-underline-offset: .15em; }
+.lang-flags--end { right: var(--gutter); }
+.lang-flag {
+  display: block; padding: 0; border: 0; background: none; cursor: pointer;
+  width: 1.75rem; height: 1.2rem; line-height: 0;
+  opacity: .4; transition: opacity .15s;
+  box-shadow: 0 0 0 1px rgba(128,128,128,.6);
+}
+.lang-flag svg { width: 100%; height: 100%; display: block; }
+.lang-flag:hover, .lang-flag.is-active { opacity: 1; }
+.lang-flag.is-active { box-shadow: 0 0 0 2px #808080; }
+.lang-flag:focus-visible { outline: 3px solid #808080; outline-offset: 3px; }
 
 @media (min-width: 900px) {
   .menu-toggle { display: none; }
@@ -199,7 +209,8 @@ a.is-placeholder { cursor: not-allowed; }
   .site-nav { flex: 1; justify-content: space-between; }
   .site-nav ul { flex-direction: row; gap: 1.75rem; }
   .site-nav a { font-size: 1.35rem; letter-spacing: .04em; }
-  .lang-switch { font-size: 1.2rem; align-self: center; }
+  .lang-flags { right: var(--gutter); }
+  .site-nav { padding-right: 6rem; }
 }
 
 /* ---------- Hero ----------
