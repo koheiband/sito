@@ -31,7 +31,8 @@ window.KOHEI_LIVE = [
     city: "Polistena",
     country: "IT",
     venue: "Pulp",
-    tickets: null
+    tickets: null,
+    info: "https://www.instagram.com/pulp_musicclub/"
   }
 
   /* Esempio per aggiungere un'altra data (togli i commenti e la virgola va prima):
