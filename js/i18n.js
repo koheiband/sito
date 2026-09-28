@@ -79,7 +79,7 @@ window.KOHEI_I18N = {
     "nav.live": "Live",
     "nav.video": "Video",
     "nav.merch": "Merch",
-    "nav.contact": "Contact",
+    "nav.contact": "Contacts",
 
     "bio.title": "Bio",
     "bio.text": "Almost by chance, they crossed paths at the foot of Etna, with Mogwai's eerie vibes still twisting in their guts. No words, just a connection sparked in noise. Together, they carve sound shelters, riding the volcano's roar, caught between chaos and reverb—where Nirvana's raw fury warps into Verdena's hazy visions, Metz's punch collides with Shellac's primal mayhem. Disillusion hits hard, catharsis kicks in. Ruin and resistance, loud as hell.",
@@ -116,7 +116,7 @@ window.KOHEI_I18N = {
     "news.ok": "Thanks! Check your inbox and confirm your subscription.",
     "news.error": "Sending failed. Check your connection and try again.",
 
-    "contact.title": "Contact",
+    "contact.title": "Contacts",
     "contact.follow": "Follow us",
 
     "footer.privacy": "Privacy & cookies",
