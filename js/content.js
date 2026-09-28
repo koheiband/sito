@@ -69,9 +69,15 @@ window.KOHEI_CONTENT = {
         en: "Everything Looks Real cover: black and white illustration of a circus in a town square, with two masked figures dancing and a dog sitting on a pedestal."
       },
       tracks: [
-        "Drones Above So Below", "Plastic Grins", "Yonigeya",
-        "Where The Nowhere Ends", "Ruse", "Plutocracy",
-        "Claustrophobia", "Drunken Sunken", "Graphene Cult"
+        "Plastic Grins",
+        "Graphene Cult",
+        "Yonigeya",
+        "Ruse",
+        "Claustrophobia (feat. Antonio Iarrusa from Mother Giraffe)",
+        "Plutocracy",
+        "Drunken Sunken",
+        "Drones Above So Below",
+        "Where the Nowhere Ends"
       ],
       links: []
     },
