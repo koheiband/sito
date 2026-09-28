@@ -11,6 +11,7 @@
      country  sigla paese, es. "IT"   (facoltativo)
      venue    locale
      tickets  link biglietti, oppure null se ingresso libero / non ancora
+     info     link al locale, mostrato come "Info" se non ci sono biglietti (facoltativo)
      soldOut  true se esaurito        (facoltativo)
      note     testo breve, es. { it: "con [BAND]", en: "w/ [BAND]" } (facoltativo)
 
@@ -22,7 +23,8 @@ window.KOHEI_LIVE = [
     city: "Palermo",
     country: "IT",
     venue: "Punk Funk",
-    tickets: null        // inserire il link quando disponibile
+    tickets: null,       // inserire il link quando disponibile
+    info: "https://www.instagram.com/punkfunkpa/"
   }
 
   /* Esempio per aggiungere un'altra data (togli i commenti e la virgola va prima):

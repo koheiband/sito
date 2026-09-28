@@ -209,6 +209,7 @@
     if (!past) {
       if (s.soldOut) cta = el("span", { class: "show__soldout", text: t("live.soldout") });
       else if (s.tickets) cta = extLink(s.tickets, t("live.tickets"), "btn btn--invert btn--small");
+      else if (s.info) cta = extLink(s.info, t("live.free"), "btn btn--invert btn--small");
       if (cta) cta.classList.add("show__cta");
     }
     var li = el("li", { class: "show" + (s.placeholder ? " is-placeholder" : "") }, [
@@ -294,17 +295,29 @@
 
   /* ---------- Merch ---------- */
   function renderMerch() {
+    var ul = document.getElementById("merch-gallery");
+    if (!ul || !C.merch) return;
+    ul.textContent = "";
+    (C.merch.photos || []).forEach(function (ph) {
+      var i = el("img", { alt: loc(ph.alt), width: 1080, height: 1440, loading: "lazy", decoding: "async" });
+      if (isPlaceholder(ph.src)) { i.classList.add("is-placeholder"); i.title = ph.src; }
+      else {
+        i.src = ph.src;
+        if (/-1080\.webp$/.test(ph.src)) {
+          i.srcset = ph.src.replace(/-1080\.webp$/, "-540.webp") + " 540w, " + ph.src + " 1080w";
+          i.sizes = "(min-width: 800px) 30vw, 85vw";
+        }
+      }
+      ul.appendChild(el("li", null, [i]));
+    });
+    var store = document.getElementById("merch-store");
     var a = document.getElementById("merch-link");
-    var i = document.getElementById("merch-img");
-    if (!a || !C.merch) return;
-    var fresh = extLink(C.merch.url, "", a.className);
-    fresh.id = "merch-link";
-    fresh.replaceChildren(el("span", { text: t("merch.cta") }));
-    if (!isPlaceholder(C.merch.url)) fresh.appendChild(el("span", { class: "visually-hidden", text: " " + t("newTab") }));
-    a.replaceWith(fresh);
-    var ni = img(C.merch.image, C.merch.imageAlt, 1200, 1200);
-    ni.id = "merch-img";
-    i.replaceWith(ni);
+    store.hidden = !C.merch.url;
+    if (C.merch.url) {
+      var fresh = extLink(C.merch.url, t("merch.cta"), a.className);
+      fresh.id = "merch-link";
+      a.replaceWith(fresh);
+    }
   }
 
   /* ---------- Newsletter ---------- */
@@ -315,17 +328,18 @@
     var action = C.newsletter && C.newsletter.action;
     if (action && !isPlaceholder(action)) f.action = action;
     f.addEventListener("submit", function (e) {
+      e.preventDefault();
       msg.textContent = "";
-      if (!f.checkValidity()) {
-        e.preventDefault();
-        f.reportValidity();
-        return;
-      }
-      if (!action || isPlaceholder(action)) {
-        e.preventDefault();
-        msg.textContent = t("news.notReady");
-      }
-      // altrimenti il browser invia il modulo a Brevo (nuova scheda, conferma double opt-in)
+      if (!f.checkValidity()) { f.reportValidity(); return; }
+      if (!action || isPlaceholder(action)) { msg.textContent = t("news.notReady"); return; }
+      // Invio diretto a Brevo. La risposta non è leggibile (no-cors):
+      // Brevo invia poi l'email di conferma (double opt-in) all'iscritto.
+      var btn = f.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      fetch(action, { method: "POST", mode: "no-cors", body: new FormData(f) })
+        .then(function () { f.reset(); msg.textContent = t("news.ok"); })
+        .catch(function () { msg.textContent = t("news.error"); })
+        .then(function () { btn.disabled = false; var l = f.querySelector('input[name="locale"]'); if (l) l.value = lang; });
     });
   }
 

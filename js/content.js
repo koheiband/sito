@@ -18,7 +18,7 @@ window.KOHEI_CONTENT = {
   /* Ogni riga = un indirizzo nella sezione Contatti, nell'ordine scritto qui. */
   contacts: [
     { label: { it: "Band", en: "Band" },       email: "band.kohei@gmail.com" },
-    { label: { it: "Booking", en: "Booking" }, email: "monica.m@agiantleap.info" }
+    { label: { it: "Booking & press", en: "Booking & press" }, email: "monica.m@agiantleap.info" }
   ],
 
   /* ---------- Canali (header, footer, sezione Contatti) ---------- */
@@ -26,7 +26,7 @@ window.KOHEI_CONTENT = {
     { name: "Instagram",  url: "https://www.instagram.com/kohei.band/" },
     { name: "Bandcamp",   url: "https://kohei.bandcamp.com" },
     { name: "Spotify",    url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" },
-    { name: "YouTube",    url: "[LINK_YOUTUBE_CANALE]" },
+    { name: "YouTube",    url: "https://www.youtube.com/channel/UCEfP9StgEbi5l374fq8VXBw" },
     { name: "SoundCloud", url: "https://soundcloud.com/koheiband" }
   ],
 
@@ -78,7 +78,7 @@ window.KOHEI_CONTENT = {
     {
       title: "Plunge",
       type: { it: "EP", en: "EP" },
-      date: null,           // facoltativo: "AAAA-MM-GG" per mostrare l'anno
+      date: "2025-02-18",
       cover: "assets/img/cover-plunge-1200.webp",
       coverAlt: {
         it: "Copertina di Plunge: la sagoma scura di una figura che si tuffa sopra un grande fiore bianco e rosa, con una cornice di scritte nere fitte.",
@@ -105,20 +105,34 @@ window.KOHEI_CONTENT = {
     }
   ],
 
-  /* ---------- Merch ---------- */
+  /* ---------- Merch ----------
+     url: link allo store esterno, oppure null (nessun bottone).
+     photos: foto verticali 3:4. Per ogni foto servono due file:
+             "…-1080.webp" (1080×1440) e "…-540.webp" (540×720).          */
   merch: {
-    url: "[LINK_STORE_MERCH]",
-    image: "assets/img/merch-tshirt-elr-1200.webp",
-    imageAlt: {
-      it: "Grafica del retro della T-shirt: logo KŌHEI, illustrazione di Everything Looks Real e la scritta EVERYTHING LOOKS REAL.",
-      en: "T-shirt back print: KŌHEI logo, Everything Looks Real illustration and the words EVERYTHING LOOKS REAL."
-    }
+    url: null,
+    photos: [
+      {
+        src: "assets/img/merch-1-1080.webp",
+        alt: { it: "T-shirt KŌHEI color panna, retro e fronte: sul retro logo, illustrazione e scritta Everything Looks Real.",
+               en: "Cream KŌHEI T-shirt, back and front: the back shows the logo, the illustration and the words Everything Looks Real." }
+      },
+      {
+        src: "assets/img/merch-2-1080.webp",
+        alt: { it: "Retro della T-shirt KŌHEI con logo, illustrazione del circo e scritta Everything Looks Real.",
+               en: "Back of the KŌHEI T-shirt with logo, circus illustration and the words Everything Looks Real." }
+      },
+      {
+        src: "assets/img/merch-3-1080.webp",
+        alt: { it: "Fronte della T-shirt KŌHEI con piccolo logo e illustrazione sul petto.",
+               en: "Front of the KŌHEI T-shirt with a small logo and illustration on the chest." }
+      }
+    ]
   },
 
   /* ---------- Newsletter (Brevo) ----------
-     Copia da Brevo > Moduli > il tuo modulo > "Condividi" > HTML:
-     l'attributo action del <form>.                                      */
+     URL del modulo Brevo (è lo stesso indirizzo dell'iframe fornito da Brevo). */
   newsletter: {
-    action: "[BREVO_FORM_ACTION_URL]"
+    action: "https://6426fec2.sibforms.com/v2/serve/MUIFAOQ6Qd8tzq0nlai1oEUdEWBP-XTk71OFyh0vPXi6BtHD06Od0RuHSYhUfnyK3tC8uK7kBeWFEdb-6nQYfqb_ZiS5G6p_nfVhYId7S5l_PDDuq4Ar7xizmZJoKSt5UxWeuL6xvclog3dLA-F39YJ-L9iZ4h0dI1jqQ33-j3KOlznRcz7ItYoiVtYJsOgGbGKzroa4NS2cUwAKUQ=="
   }
 };

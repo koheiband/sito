@@ -155,17 +155,13 @@
 
     <!-- ============ MERCH ============ -->
     <section class="section section--paper" id="merch" aria-labelledby="merch-title">
-      <div class="container merch">
-        <div class="merch__media">
-          <img id="merch-img" src="" alt="" width="1200" height="1200" loading="lazy" decoding="async">
-        </div>
-        <div class="merch__body">
-          <h2 class="section-title" id="merch-title" data-i18n="merch.title">Merch</h2>
+      <div class="container">
+        <h2 class="section-title" id="merch-title" data-i18n="merch.title">Merch</h2>
+        <ul class="merch-gallery" id="merch-gallery"></ul>
+        <!-- testo e bottone compaiono solo se in content.js c'è il link allo store -->
+        <div class="merch__store" id="merch-store" hidden>
           <p data-i18n="merch.text"></p>
-          <a class="btn btn--solid" id="merch-link" href="#" target="_blank" rel="noopener">
-            <span data-i18n="merch.cta">Vai allo store</span>
-            <span class="visually-hidden" data-i18n="newTab"></span>
-          </a>
+          <a class="btn btn--solid" id="merch-link" href="#"></a>
         </div>
       </div>
     </section>
@@ -177,11 +173,10 @@
           <h2 class="section-title" id="news-title" data-i18n="news.title">Newsletter</h2>
           <p data-i18n="news.text"></p>
         </div>
-        <!-- Il form invia i dati direttamente a Brevo solo al clic su "Iscriviti".
-             Nessuno script Brevo viene caricato sul sito. I nomi dei campi (EMAIL,
-             OPT_IN, email_address_check, locale) sono quelli del modulo HTML Brevo:
-             verificali nel codice generato da Brevo per il tuo modulo. -->
-        <form class="news-form" id="news-form" method="post" action="#" target="_blank" novalidate>
+        <!-- Il form invia i dati a Brevo solo al clic su "Iscriviti" (js/main.js).
+             Nessuno script né iframe Brevo viene caricato sul sito.
+             Campi del modulo Brevo: EMAIL, email_address_check (anti-spam), locale. -->
+        <form class="news-form" id="news-form" method="post" action="#" novalidate>
           <label for="news-email" data-i18n="news.email">Indirizzo email</label>
           <div class="news-form__row">
             <input id="news-email" name="EMAIL" type="email" autocomplete="email" required
@@ -189,7 +184,7 @@
             <button class="btn btn--solid" type="submit" data-i18n="news.submit">Iscriviti</button>
           </div>
           <label class="check">
-            <input type="checkbox" name="OPT_IN" value="1" required>
+            <input type="checkbox" id="news-consent" required>
             <span data-i18n="news.consent"></span>
           </label>
           <a class="text-link" href="privacy.html#newsletter" data-privacy-link data-i18n="news.privacy">Informativa privacy</a>

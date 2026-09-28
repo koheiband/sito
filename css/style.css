@@ -320,12 +320,20 @@ a.is-placeholder { cursor: not-allowed; }
 .video-section .small-print { color: var(--muted-dark); }
 .video__missing { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); padding: 1rem; text-align: center; }
 
-/* ---------- Merch ---------- */
-.merch { display: grid; gap: 2.5rem; align-items: center; }
-.merch__media img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--sketch); }
-.merch__body p { font-size: 1.25rem; max-width: 30rem; margin: 0 0 2rem; }
-.merch__body { order: -1; }
-@media (min-width: 800px) { .merch { grid-template-columns: 1fr 1fr; gap: 5rem; } .merch__body { order: 0; } }
+/* ---------- Merch: galleria di foto verticali ---------- */
+.merch-gallery {
+  display: grid; gap: 1rem;
+  grid-auto-flow: column; grid-auto-columns: 80%;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: .5rem;
+}
+.merch-gallery li { scroll-snap-align: start; }
+.merch-gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; background: var(--sketch); }
+@media (min-width: 800px) {
+  .merch-gallery { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; gap: 1.5rem; }
+}
+.merch__store { margin-top: 2.5rem; }
+.merch__store p { font-size: 1.25rem; max-width: 30rem; margin: 0 0 1.5rem; }
 
 /* ---------- Newsletter ---------- */
 .newsletter { display: grid; gap: 2rem; }

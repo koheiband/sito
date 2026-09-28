@@ -36,7 +36,6 @@ Pubblicato con GitHub Pages sul dominio `kohei.it`.
 - **Uscite future**: con `date` futura il sito mostra "In uscita il …". Dopo quella data mostra l'anno.
   Con `date: null` e `upcoming: true` mostra "Prossimamente".
 
-Ogni valore tra parentesi quadre, per esempio `[LINK_YOUTUBE_CANALE]`, è un **segnaposto**.
 Sul sito compare con un bordo tratteggiato finché non lo sostituisci.
 Un valore `null` nasconde l'elemento.
 
@@ -44,13 +43,10 @@ Un valore `null` nasconde l'elemento.
 
 | Segnaposto | File | Cosa serve |
 |---|---|---|
-| `[LINK_YOUTUBE_CANALE]` | js/content.js | Link al canale YouTube |
 | `[YOUTUBE_ID_1]`, `[TITOLO_VIDEO_1]`, `[THUMB_VIDEO_1]` | js/content.js | Video |
-| `[LINK_STORE_MERCH]` | js/content.js | Link allo store esterno |
-| `[BREVO_FORM_ACTION_URL]` | js/content.js | URL del modulo Brevo |
+| `merch.url` (ora `null`) | js/content.js | Link allo store esterno, quando ci sarà: compaiono testo e bottone |
 | `[TITOLARE_INDIRIZZO]`, `[TITOLARE_EMAIL]` | privacy.html | Recapiti del titolare (Pietro Santoro) |
 | `[SERVIZIO_NEWSLETTER]`, `[DATA_AGGIORNAMENTO]` | privacy.html | Conferma servizio e data |
-| `aileron-regular.woff2`, `aileron-bold.woff2` | assets/fonts/ | Font del testo |
 
 ## Immagini: formati consigliati
 
@@ -60,22 +56,17 @@ Tutte in **WebP** (qualità 75–85), salvo diversa indicazione.
 |---|---|---|
 | `cover-<titolo>-1200.webp` + `cover-<titolo>-600.webp` | 1200×1200 e 600×600 | Copertine. Con questi nomi il sito usa da solo la versione piccola su mobile |
 | `thumb-video-1.webp` | 1920×1080 | Anteprima del video (fotogramma salvato in locale), mostrata a tutta larghezza |
-| `merch.webp` | 1200×1200 | Foto merch, fondo scuro o neutro |
+| `merch-n-1080.webp` + `merch-n-540.webp` | 1080×1440 e 540×720 | Foto merch verticali 3:4 |
 | (hero) | — | Usa la copertina di Everything Looks Real (già presente) |
 | `og-image.jpg` | 1200×630 JPG | Anteprima condivisione social (già presente) |
 | `logo-kohei.webp` | 1200 px di larghezza, nero su trasparente | Logo (già presente) |
 
 ## Newsletter (Brevo)
 
-1. Crea un account gratuito su brevo.com.
-2. Contatti > Liste: crea la lista "Newsletter KŌHEI".
-3. Contatti > Moduli: crea un modulo di iscrizione con **doppio opt-in** attivo.
-4. Nel passaggio "Condividi", scegli il codice HTML e copia il valore `action="…"` del tag `<form>`.
-5. Incolla il valore in `js/content.js`, campo `newsletter.action`.
-6. Controlla che i nomi dei campi nel codice Brevo siano `EMAIL`, `OPT_IN`, `email_address_check`, `locale`.
-   Se sono diversi, aggiorna il form in `index.html`.
-
-Il sito non carica script di Brevo: i dati partono verso Brevo solo quando il visitatore clicca "Iscriviti".
+Il modulo è già collegato: l'indirizzo è in `js/content.js`, campo `newsletter.action`
+(è lo stesso URL dell'iframe che fornisce Brevo). Il sito non carica né l'iframe né
+script di Brevo: al clic su "Iscriviti" invia solo email e lingua, e Brevo manda
+l'email di conferma. Se cambi modulo su Brevo, sostituisci solo quell'URL.
 
 ## Privacy
 

@@ -52,6 +52,8 @@ window.KOHEI_I18N = {
     "news.privacy": "Informativa privacy",
     "news.submit": "Iscriviti",
     "news.notReady": "Iscrizione non ancora attiva: modulo in configurazione.",
+    "news.ok": "Grazie! Controlla la tua email e conferma l'iscrizione.",
+    "news.error": "Invio non riuscito. Controlla la connessione e riprova.",
 
     "contact.title": "Contatti",
     "contact.follow": "Seguici",
@@ -111,6 +113,8 @@ window.KOHEI_I18N = {
     "news.privacy": "Privacy notice",
     "news.submit": "Subscribe",
     "news.notReady": "Sign-up not active yet: form being set up.",
+    "news.ok": "Thanks! Check your inbox and confirm your subscription.",
+    "news.error": "Sending failed. Check your connection and try again.",
 
     "contact.title": "Contact",
     "contact.follow": "Follow us",
