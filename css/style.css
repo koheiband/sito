@@ -388,7 +388,7 @@ a.is-placeholder { cursor: not-allowed; }
 .newsletter p { font-size: 1.25rem; margin: 0; }
 @media (min-width: 900px) { .newsletter { grid-template-columns: 1fr 1fr; align-items: end; gap: 5rem; } }
 .news-form { display: grid; gap: 1rem; }
-.news-form > label:first-child { font-weight: 700; }
+.news-form input[type="email"]::placeholder { color: #C8C8C8; opacity: 1; }
 .news-form__row { display: flex; flex-direction: column; gap: .75rem; }
 @media (min-width: 500px) { .news-form__row { flex-direction: row; } }
 .news-form input[type="email"] {
@@ -399,7 +399,8 @@ a.is-placeholder { cursor: not-allowed; }
 .check { display: flex; gap: .75rem; align-items: flex-start; font-size: .95rem; cursor: pointer; }
 .check input { width: 1.25rem; height: 1.25rem; margin: .15rem 0 0; accent-color: var(--black); flex: none; }
 .news-form .text-link { justify-self: start; font-size: .95rem; }
-.form-msg { min-height: 1.5em; margin: 0; font-weight: 700; font-size: 1rem !important; }
+.form-msg { margin: 0; font-weight: 700; font-size: 1rem !important; }
+.form-msg:empty { display: none; }
 
 /* ---------- Contatti ---------- */
 .contact__list { margin: 0; display: grid; gap: .5rem; }

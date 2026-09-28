@@ -214,9 +214,10 @@
              Nessuno script né iframe Brevo viene caricato sul sito.
              Campi del modulo Brevo: EMAIL, email_address_check (anti-spam), locale. -->
         <form class="news-form" id="news-form" method="post" action="#" novalidate>
-          <label for="news-email" data-i18n="news.email">Indirizzo email</label>
+          <label for="news-email" class="visually-hidden" data-i18n="news.email">Indirizzo email</label>
           <div class="news-form__row">
             <input id="news-email" name="EMAIL" type="email" autocomplete="email" required
+                   placeholder="nome@esempio.it" data-i18n-attr="placeholder:news.placeholder"
                    inputmode="email" spellcheck="false">
             <button class="btn btn--solid" type="submit" data-i18n="news.submit">Iscriviti</button>
           </div>
