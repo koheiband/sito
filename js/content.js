@@ -36,7 +36,7 @@ window.KOHEI_CONTENT = {
   featured: {
     kicker: { it: "Nuovo singolo · 16.10.2026", en: "New single · 16.10.2026" },
     label: { it: "Graphene Cult — Presave", en: "Graphene Cult — Presave" },
-    href: "#musica"
+    href: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release"
   },
 
   /* ---------- Musica ----------
