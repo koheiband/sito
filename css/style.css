@@ -312,7 +312,8 @@ a.is-placeholder { cursor: not-allowed; }
 .video__icon::before { content: ""; border-style: solid; border-width: .8rem 0 .8rem 1.3rem; border-color: transparent transparent transparent currentColor; margin-left: .3rem; }
 .video__title { font-family: var(--font-display); font-size: 1.6rem; text-transform: uppercase; margin-top: .75rem; color: var(--black); }
 /* Video singolo a tutta larghezza (sezione nera subito dopo l'hero) */
-.video-section { padding-top: clamp(2rem, 5vw, 4rem); }
+.video-section { padding-top: 0; }
+.hero { padding-bottom: clamp(2rem, 5vw, 3.5rem) !important; }
 .videos--full { display: block; }
 .videos--full .video__frame { width: 100%; max-height: 100svh; background: #1a1a1a; }
 .videos--full .video__title { color: var(--white); padding: 0 var(--gutter); }
