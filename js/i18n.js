@@ -5,7 +5,7 @@
 
 window.KOHEI_I18N = {
   it: {
-    "meta.title": "KŌHEI — band noise rock dall'Etna",
+    "meta.title": "KŌHEI",
     "meta.description": "KŌHEI: noise rock nato ai piedi dell'Etna. Musica, date live, video, merch e contatti.",
     "privacy.title": "Privacy e cookie — KŌHEI",
     "privacy.description": "Informativa privacy e cookie del sito kohei.it.",
@@ -65,7 +65,7 @@ window.KOHEI_I18N = {
   },
 
   en: {
-    "meta.title": "KŌHEI — noise rock band from Mount Etna",
+    "meta.title": "KŌHEI",
     "meta.description": "KŌHEI: noise rock born at the foot of Mount Etna. Music, live dates, videos, merch and contacts.",
     "privacy.title": "Privacy & cookies — KŌHEI",
     "privacy.description": "Privacy and cookie notice for kohei.it.",
