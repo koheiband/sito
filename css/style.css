@@ -361,8 +361,14 @@ a.is-placeholder { cursor: not-allowed; }
 @media (min-width: 800px) {
   .merch-gallery { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; gap: 1.5rem; }
 }
-.merch__store { margin-top: 2.5rem; }
-.merch__store p { font-size: 1.25rem; max-width: 30rem; margin: 0 0 1.5rem; }
+/* testo a sinistra, bottone a destra sulla stessa riga; su schermi stretti va a capo */
+.merch__store {
+  margin-top: 2.5rem;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 1rem 2rem;
+}
+.merch__store[hidden] { display: none; }
+.merch__store p { font-size: 1.25rem; margin: 0; }
 
 /* ---------- Newsletter ---------- */
 .newsletter { display: grid; gap: 2rem; }
