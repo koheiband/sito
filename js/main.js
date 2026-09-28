@@ -12,6 +12,16 @@
   var LANGS = ["it", "en"];
   var lang = pickLang();
 
+  /* ---------- Icone social (SVG disegnate a mano, colore = currentColor) ---------- */
+  var ICO = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">';
+  var ICONS = {
+    instagram: ICO + '<rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/></svg>',
+    bandcamp: ICO + '<path d="M0 18.75l7.44-13.5H24l-7.44 13.5z" fill="currentColor"/></svg>',
+    spotify: ICO + '<circle cx="12" cy="12" r="11" fill="currentColor"/><path class="ico-cut" d="M6 9.3c4-1.2 8.5-.9 12 1.1M6.7 12.7c3.3-.9 7-.6 9.9 1M7.4 15.9c2.6-.7 5.4-.5 7.6.8" fill="none" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    youtube: ICO + '<rect x="1" y="4.5" width="22" height="15" rx="4.5" fill="currentColor"/><path class="ico-cut-fill" d="M9.8 8.6v6.8l5.9-3.4z"/></svg>',
+    soundcloud: ICO + '<path d="M10 17V8.6a5.5 5.5 0 0 1 10.3 2.5A3 3 0 1 1 21 17z" fill="currentColor"/><rect x="1" y="13" width="1.3" height="4" rx=".65" fill="currentColor"/><rect x="3.3" y="11.4" width="1.3" height="5.6" rx=".65" fill="currentColor"/><rect x="5.6" y="10" width="1.3" height="7" rx=".65" fill="currentColor"/><rect x="7.9" y="9.2" width="1.3" height="7.8" rx=".65" fill="currentColor"/></svg>'
+  };
+
   /* ---------- Utility ---------- */
   function isPlaceholder(v) { return typeof v === "string" && /\[[^\]]+\]/.test(v); }
   function t(key) { return (I18N[lang] && I18N[lang][key]) || I18N.it[key] || ""; }
@@ -357,7 +367,16 @@
     if (ul) {
       ul.textContent = "";
       C.socials.filter(function (s) { return s.url; }).forEach(function (s) {
-        ul.appendChild(el("li", null, [extLink(s.url, s.name)]));
+        var a = extLink(s.url, "", "social-link");
+        var svg = ICONS[s.name.toLowerCase()];
+        if (svg) {
+          // icona visibile; il nome resta per lettori di schermo e come tooltip
+          a.insertAdjacentHTML("afterbegin", svg + '<span class="visually-hidden">' + s.name + "</span>");
+          a.title = s.name;
+        } else {
+          a.insertBefore(document.createTextNode(s.name), a.firstChild);
+        }
+        ul.appendChild(el("li", null, [a]));
       });
     }
   }
