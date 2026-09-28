@@ -27,7 +27,7 @@ window.KOHEI_CONTENT = {
     { name: "Bandcamp",   url: "https://kohei.bandcamp.com" },
     { name: "Spotify",    url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" },
     { name: "YouTube",    url: "[LINK_YOUTUBE_CANALE]" },
-    { name: "SoundCloud", url: "[LINK_SOUNDCLOUD]" }       // null se non usato
+    { name: "SoundCloud", url: "https://soundcloud.com/koheiband" }
   ],
 
   /* ---------- In evidenza nell'hero ---------- */

@@ -45,7 +45,6 @@ Un valore `null` nasconde l'elemento.
 | Segnaposto | File | Cosa serve |
 |---|---|---|
 | `[LINK_YOUTUBE_CANALE]` | js/content.js | Link al canale YouTube |
-| `[LINK_SOUNDCLOUD]` | js/content.js | Link SoundCloud, oppure `null` |
 | `[YOUTUBE_ID_1]`, `[TITOLO_VIDEO_1]`, `[THUMB_VIDEO_1]` | js/content.js | Video |
 | `[LINK_STORE_MERCH]` | js/content.js | Link allo store esterno |
 | `[BREVO_FORM_ACTION_URL]` | js/content.js | URL del modulo Brevo |
