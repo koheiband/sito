@@ -42,8 +42,8 @@ window.KOHEI_I18N = {
     "video.missing": "Video non ancora disponibile.",
 
     "merch.title": "Merch",
-    "merch.text": "Magliette, dischi e altro: tutto sullo store ufficiale.",
-    "merch.cta": "Vai allo store",
+    "merch.text": "Per ordinare scrivici in direct su Instagram.",
+    "merch.cta": "Scrivici su Instagram",
 
     "news.title": "Newsletter",
     "news.text": "Nuove uscite e date live, niente spam.",
@@ -103,8 +103,8 @@ window.KOHEI_I18N = {
     "video.missing": "Video not available yet.",
 
     "merch.title": "Merch",
-    "merch.text": "Shirts, records and more: all on the official store.",
-    "merch.cta": "Go to the store",
+    "merch.text": "To order, send us a DM on Instagram.",
+    "merch.cta": "Message us on Instagram",
 
     "news.title": "Newsletter",
     "news.text": "New releases and live dates, no spam.",

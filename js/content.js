@@ -106,11 +106,12 @@ window.KOHEI_CONTENT = {
   ],
 
   /* ---------- Merch ----------
-     url: link allo store esterno, oppure null (nessun bottone).
+     url: link del bottone (ora: messaggio diretto su Instagram, ig.me/m/<account>),
+          oppure null per nascondere testo e bottone.
      photos: foto verticali 3:4. Per ogni foto servono due file:
              "…-1080.webp" (1080×1440) e "…-540.webp" (540×720).          */
   merch: {
-    url: null,
+    url: "https://ig.me/m/kohei.band",
     photos: [
       {
         src: "assets/img/merch-1-1080.webp",
