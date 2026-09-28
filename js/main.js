@@ -213,14 +213,10 @@
     if (!root) return;
     root.textContent = "";
     // prima le uscite future, poi le altre in ordine di data decrescente
-    var list = C.releases.slice().sort(function (a, b) {
-      var sa = releaseStatus(a).upcoming, sb = releaseStatus(b).upcoming;
-      if (sa !== sb) return sa ? -1 : 1;
-      // senza data: in fondo tra le future ("Prossimamente"), in fondo anche tra le passate
-      var none = sa ? "9999" : "0";
-      var da = isISODate(a.date) ? a.date : none, db = isISODate(b.date) ? b.date : none;
-      return sa ? (da < db ? -1 : 1) : (da > db ? -1 : 1);
-    });
+    // ordine cronologico inverso: la più lontana nel futuro in cima.
+    // "Prossimamente" senza data conta come la più futura; uscita passata senza data va in fondo.
+    function when(r) { return isISODate(r.date) ? r.date : (r.upcoming ? "9999-12-31" : "0000-00-00"); }
+    var list = C.releases.slice().sort(function (a, b) { return when(a) < when(b) ? 1 : -1; });
     list.forEach(function (r) {
       var st = releaseStatus(r);
       var meta = el("p", { class: "release__meta" }, [
