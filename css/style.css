@@ -433,7 +433,7 @@ a.is-placeholder { cursor: not-allowed; }
 .release__figure { margin: 0; }
 .band-photo__caption { padding-top: .25rem; }
 .band-photo__caption .credit { text-align: right; }
-.site-footer__credits { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid #3a3a3a; font-size: .85rem; color: var(--muted-dark); }
+.site-footer__credits { margin-top: 1.5rem; font-size: .85rem; color: var(--muted-dark); }
 .site-footer__credits-title { margin: 0 0 .4rem; text-transform: uppercase; letter-spacing: .08em; }
 .site-footer__credits ul { display: flex; flex-wrap: wrap; gap: .35rem 1.5rem; }
 
