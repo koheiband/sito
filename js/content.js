@@ -53,17 +53,15 @@ window.KOHEI_CONTENT = {
   },
 
   /* ---------- News (sezione subito sotto l'hero) ----------
-     La più recente va in cima. date = giorno di pubblicazione della notizia.
+     Una riga per notizia: data · testo · link. La più recente va in cima.
      link.href può puntare a una sezione del sito (es. "#graphene-cult")
      o a un sito esterno.                                                     */
   news: [
     {
       date: "2026-09-28",
-      title: { it: "Graphene Cult, il nuovo singolo, esce il 16 ottobre",
-               en: "New single Graphene Cult is out on 16 October" },
-      text: { it: "Il 16 ottobre 2026 esce Graphene Cult, primo singolo dall'album di debutto Everything Looks Real. Fai il presave per ascoltarlo appena esce.",
-              en: "Graphene Cult, the first single from the debut album Everything Looks Real, is out on 16 October 2026. Pre-save it to hear it the moment it drops." },
-      link: { label: { it: "Vai al singolo e fai il presave", en: "Go to the single and pre-save" }, href: "#graphene-cult" }
+      text: { it: "Il nuovo singolo Graphene Cult esce il 16 ottobre.",
+              en: "New single Graphene Cult is out on 16 October." },
+      link: { label: { it: "Presave", en: "Pre-save" }, href: "#graphene-cult" }
     }
   ],
 

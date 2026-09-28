@@ -189,10 +189,9 @@
         link = /^https?:/.test(n.link.href) ? extLink(n.link.href, loc(n.link.label), "news-item__link")
                                            : el("a", { class: "news-item__link", href: n.link.href, text: loc(n.link.label) + " ↓" });
       }
-      root.appendChild(el("article", { class: "news-item" }, [
+      root.appendChild(el("p", { class: "news-item" }, [
         isISODate(n.date) ? el("time", { class: "news-item__date", datetime: n.date, text: fmtDate(n.date, { day: "2-digit", month: "2-digit", year: "numeric" }) }) : null,
-        el("h3", { class: "news-item__title", text: loc(n.title) }),
-        el("p", { class: "news-item__text", text: loc(n.text) }),
+        el("span", { class: "news-item__text", text: loc(n.text) }),
         link
       ]));
     });
