@@ -154,6 +154,26 @@
     window.matchMedia("(min-width: 900px)").addEventListener("change", function () { setOpen(false); });
   }
 
+  /* ---------- Crediti ---------- */
+  // "Artwork: @nome" con link al profilo dell'artista
+  function creditLine(key, cls) {
+    var c = C.credits && C.credits[key];
+    if (!c) return null;
+    return el("p", { class: "credit " + (cls || "") }, [loc(c.label) + ": ", extLink(c.url, c.name, "credit__link")]);
+  }
+  function renderCredits() {
+    var photo = document.getElementById("photo-credit");
+    if (photo) photo.replaceChildren.apply(photo, [creditLine("photo")].filter(Boolean));
+    var ul = document.getElementById("footer-credits");
+    if (!ul || !C.credits) return;
+    ul.textContent = "";
+    Object.keys(C.credits).forEach(function (k) {
+      var c = C.credits[k];
+      var label = loc(c.label) + (c.works ? " " + loc(c.works) : "") + ": ";
+      ul.appendChild(el("li", null, [label, extLink(c.url, c.name, "credit__link")]));
+    });
+  }
+
   /* ---------- Hero ---------- */
   function renderHero() {
     var a = document.getElementById("featured-link");
@@ -209,8 +229,10 @@
         links.forEach(function (l) { box.appendChild(extLink(l.url, l.name, "btn btn--small")); });
         body.appendChild(box);
       }
+      var cover = img(r.cover, r.coverAlt, 1200, 1200);
+      cover.classList.add("release__cover");
       root.appendChild(el("article", { class: "release" }, [
-        (function () { var i = img(r.cover, r.coverAlt, 1200, 1200); i.classList.add("release__cover"); return i; })(),
+        el("figure", { class: "release__figure" }, [cover, r.credit ? el("figcaption", null, [creditLine(r.credit)]) : null]),
         body
       ]));
     });
@@ -331,6 +353,8 @@
       }
       ul.appendChild(el("li", null, [i]));
     });
+    var mc = document.getElementById("merch-credit");
+    if (mc) mc.replaceChildren.apply(mc, [C.merch.credit ? creditLine(C.merch.credit) : null].filter(Boolean));
     var store = document.getElementById("merch-store");
     var a = document.getElementById("merch-link");
     store.hidden = !C.merch.url;
@@ -410,7 +434,7 @@
   function renderAll() {
     applyStaticTexts();
     if (C) {
-      renderHero(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderContacts();
+      renderHero(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderContacts(); renderCredits();
     }
     updateLangLinks();
     var y = document.getElementById("year");

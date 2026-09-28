@@ -68,6 +68,7 @@ window.KOHEI_I18N = {
 
     "footer.privacy": "Privacy e cookie",
     "footer.top": "Torna su",
+    "footer.credits": "Crediti",
 
     "placeholder": "Contenuto non ancora inserito",
     "newTab": "(si apre in una nuova scheda)"
@@ -137,6 +138,7 @@ window.KOHEI_I18N = {
 
     "footer.privacy": "Privacy & cookies",
     "footer.top": "Back to top",
+    "footer.credits": "Credits",
 
     "placeholder": "Content not added yet",
     "newTab": "(opens in a new tab)"

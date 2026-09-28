@@ -30,6 +30,28 @@ window.KOHEI_CONTENT = {
     { name: "SoundCloud", url: "https://soundcloud.com/koheiband" }
   ],
 
+  /* ---------- Crediti ----------
+     Ogni voce compare sotto l'opera (didascalia) e nel blocco Crediti del footer.
+     Nelle uscite e nel merch si richiama con credit: "artwork" / "print".     */
+  credits: {
+    artwork: {
+      label: { it: "Artwork", en: "Artwork" },
+      works: { it: "Everything Looks Real e Graphene Cult", en: "Everything Looks Real and Graphene Cult" },
+      name: "@alfio_ciada",
+      url: "https://www.instagram.com/alfio_ciada/"
+    },
+    photo: {
+      label: { it: "Foto", en: "Photo" },
+      name: "@a_simple_look",
+      url: "https://www.instagram.com/a_simple_look/"
+    },
+    print: {
+      label: { it: "Stampa T-shirt", en: "T-shirt printing" },
+      name: "@tinto_serigrafia",
+      url: "https://www.instagram.com/tinto_serigrafia/"
+    }
+  },
+
   /* ---------- In evidenza nell'hero ---------- */
   /* href: link del presave (es. Spotify / DistroKid). Finché manca, porta alla sezione Musica.
      Un link esterno si apre in una nuova scheda. */
@@ -55,6 +77,7 @@ window.KOHEI_CONTENT = {
         en: "Graphene Cult cover: black and white illustration of a horned figure wrapped in a spiky wool sweater, dancing on one leg."
       },
       tracks: [],
+      credit: "artwork",
       // Dopo l'uscita: sostituire con i link diretti al singolo
       links: [
         { name: "Bandcamp", url: "https://kohei.bandcamp.com" },
@@ -82,6 +105,7 @@ window.KOHEI_CONTENT = {
         "Drones Above So Below",
         "Where the Nowhere Ends"
       ],
+      credit: "artwork",
       links: []
     },
     {
@@ -120,6 +144,7 @@ window.KOHEI_CONTENT = {
      photos: foto verticali 3:4. Per ogni foto servono due file:
              "…-1080.webp" (1080×1440) e "…-540.webp" (540×720).          */
   merch: {
+    credit: "print",
     url: "https://ig.me/m/kohei.band",
     photos: [
       {
