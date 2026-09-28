@@ -328,12 +328,13 @@
 
   /* ---------- Contatti ---------- */
   function renderContacts() {
-    var mail = document.getElementById("contact-email");
-    var label = document.getElementById("contact-email-label");
-    if (mail) {
-      mail.href = "mailto:" + C.contacts.email;
-      mail.textContent = C.contacts.email;
-      label.textContent = loc(C.contacts.emailLabel);
+    var box = document.getElementById("contact-emails");
+    if (box) {
+      box.textContent = "";
+      C.contacts.filter(function (c) { return c.email; }).forEach(function (c) {
+        box.appendChild(el("dt", { text: loc(c.label) }));
+        box.appendChild(el("dd", null, [el("a", { class: "big-link", href: "mailto:" + c.email, text: c.email })]));
+      });
     }
     var ul = document.getElementById("contact-socials");
     if (ul) {

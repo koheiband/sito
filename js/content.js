@@ -15,10 +15,11 @@
 window.KOHEI_CONTENT = {
 
   /* ---------- Contatti ---------- */
-  contacts: {
-    email: "monica.m@agiantleap.info",      // booking + press
-    emailLabel: { it: "Booking & press", en: "Booking & press" }
-  },
+  /* Ogni riga = un indirizzo nella sezione Contatti, nell'ordine scritto qui. */
+  contacts: [
+    { label: { it: "Band", en: "Band" },       email: "band.kohei@gmail.com" },
+    { label: { it: "Booking", en: "Booking" }, email: "monica.m@agiantleap.info" }
+  ],
 
   /* ---------- Canali (header, footer, sezione Contatti) ---------- */
   socials: [
