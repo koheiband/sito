@@ -25,6 +25,13 @@ window.KOHEI_LIVE = [
     venue: "Punk Funk",
     tickets: null,       // inserire il link quando disponibile
     info: "https://www.instagram.com/punkfunkpa/"
+  },
+  {
+    date: "2026-11-21",
+    city: "Polistena",
+    country: "IT",
+    venue: "Pulp",
+    tickets: null
   }
 
   /* Esempio per aggiungere un'altra data (togli i commenti e la virgola va prima):
