@@ -142,9 +142,9 @@ window.KOHEI_CONTENT = {
      Il sito mostra un solo video, a tutta larghezza: il primo della lista.                                               */
   videos: [
     {
-      id: "[YOUTUBE_ID_1]",
-      title: "[TITOLO_VIDEO_1]",
-      thumb: "assets/img/[THUMB_VIDEO_1].webp"
+      id: "GT0pt0LPsvM",
+      title: "Graphene Cult — Live From Casetta",
+      thumb: "assets/img/video-graphene-cult-live-1280.webp"
     }
   ],
 

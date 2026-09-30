@@ -46,7 +46,6 @@ Un valore `null` nasconde l'elemento.
 
 | Segnaposto | File | Cosa serve |
 |---|---|---|
-| `[YOUTUBE_ID_1]`, `[TITOLO_VIDEO_1]`, `[THUMB_VIDEO_1]` | js/content.js | Video |
 | `merch.url` | js/content.js | Link del bottone merch (ora DM Instagram); `null` lo nasconde |
 
 ## Immagini: formati consigliati

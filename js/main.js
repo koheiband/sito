@@ -73,7 +73,10 @@
       i.title = src;
     } else {
       i.src = src;
-      if (/-1200\.webp$/.test(src)) {
+      if (/-1280\.webp$/.test(src)) {
+        i.srcset = src.replace(/-1280\.webp$/, "-640.webp") + " 640w, " + src + " 1280w";
+        i.sizes = "100vw";
+      } else if (/-1200\.webp$/.test(src)) {
         i.srcset = src.replace(/-1200\.webp$/, "-600.webp") + " 600w, " + src + " 1200w";
         i.sizes = "(min-width: 700px) 45vw, 100vw";
       }
