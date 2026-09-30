@@ -24,6 +24,7 @@ window.KOHEI_CONTENT = {
   /* ---------- Canali (header, footer, sezione Contatti) ---------- */
   socials: [
     { name: "Instagram",  url: "https://www.instagram.com/kohei.band/" },
+    { name: "Facebook",   url: "https://www.facebook.com/people/K%C5%8Dhei/61595102183719/" },
     { name: "Bandcamp",   url: "https://kohei.bandcamp.com" },
     { name: "Spotify",    url: "https://open.spotify.com/artist/0cD3GTbUbGiZ6goQBkSjxv" },
     { name: "YouTube",    url: "https://www.youtube.com/channel/UCEfP9StgEbi5l374fq8VXBw" },
