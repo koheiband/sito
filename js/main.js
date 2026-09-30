@@ -328,6 +328,18 @@
     root.textContent = "";
     C.videos.slice(0, 1).forEach(function (v) {
       var frame = el("div", { class: "video__frame" });
+      if (!v.id) {
+        // video non ancora pubblico: solo anteprima, niente player né link a YouTube
+        var still = img(v.thumb, { it: "Anteprima del video " + v.title, en: v.title + " video preview" }, 1280, 720);
+        still.classList.add("video__still");
+        frame.appendChild(still);
+        var soon = el("div", { class: "video__soon" }, [
+          el("p", { class: "video__soon-label", text: t("video.soon") }),
+          v.presave ? extLink(v.presave, t("music.presave"), "btn btn--small btn--invert") : null
+        ]);
+        root.appendChild(el("figure", { class: "video", style: "margin:0" }, [frame, el("figcaption", null, [soon])]));
+        return;
+      }
       if (isPlaceholder(v.id)) {
         frame.classList.add("is-placeholder");
         frame.appendChild(el("p", { class: "video__missing", text: t("video.missing") + " " + v.id }));
