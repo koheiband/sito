@@ -384,10 +384,23 @@ a.is-placeholder { cursor: not-allowed; }
 .merch__store p { font-size: 1.25rem; margin: 0; }
 
 /* ---------- Newsletter ---------- */
-.newsletter { display: grid; gap: 2rem; }
-.newsletter p { font-size: 1.25rem; margin: 0; }
-@media (min-width: 900px) { .newsletter { grid-template-columns: 1fr 1fr; align-items: end; gap: 5rem; } }
+/* Mobile: tutto in colonna. Desktop: griglia 2×2 —
+   riga 1: titolo | campo email (bordi inferiori allineati)
+   riga 2: testo  | consenso + link privacy (bordi inferiori allineati) */
+.newsletter { display: grid; gap: 1.25rem; }
+.newsletter__title { margin-bottom: 0; }
+.newsletter__text { font-size: 1.25rem; margin: 0 0 .75rem; }
 .news-form { display: grid; gap: 1rem; }
+.news-form__meta { display: grid; gap: 1rem; }
+@media (min-width: 900px) {
+  .newsletter { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 5rem; row-gap: 1.25rem; }
+  .newsletter__title { grid-column: 1; grid-row: 1; align-self: end; line-height: .8; }
+  .newsletter__text { grid-column: 1; grid-row: 2; align-self: end; margin: 0; line-height: 1.2; }
+  .news-form { grid-column: 2; grid-row: 1 / span 2; grid-template-rows: subgrid; row-gap: 1.25rem; }
+  .news-form__row { grid-row: 1; align-self: end; }
+  .news-form__meta { grid-row: 2; align-self: end; }
+  .newsletter__msg { grid-column: 2; }
+}
 .news-form input[type="email"]::placeholder { color: #C8C8C8; opacity: 1; }
 .news-form__row { display: flex; flex-direction: column; gap: .75rem; }
 @media (min-width: 500px) { .news-form__row { flex-direction: row; } }

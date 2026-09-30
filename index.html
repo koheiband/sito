@@ -207,10 +207,8 @@
     <!-- ============ NEWSLETTER (Brevo) ============ -->
     <section class="section section--paper" id="newsletter" aria-labelledby="news-title">
       <div class="container newsletter">
-        <div>
-          <h2 class="section-title" id="news-title" data-i18n="news.title">Newsletter</h2>
-          <p data-i18n="news.text"></p>
-        </div>
+        <h2 class="section-title newsletter__title" id="news-title" data-i18n="news.title">Newsletter</h2>
+        <p class="newsletter__text" data-i18n="news.text"></p>
         <!-- Il form invia i dati a Brevo solo al clic su "Iscriviti" (js/main.js).
              Nessuno script né iframe Brevo viene caricato sul sito.
              Campi del modulo Brevo: EMAIL, email_address_check (anti-spam), locale. -->
@@ -222,16 +220,18 @@
                    inputmode="email" spellcheck="false">
             <button class="btn btn--solid" type="submit" data-i18n="news.submit">Iscriviti</button>
           </div>
-          <label class="check">
-            <input type="checkbox" id="news-consent" required>
-            <span data-i18n="news.consent"></span>
-          </label>
-          <a class="text-link" href="privacy.html#newsletter" data-privacy-link data-i18n="news.privacy">Informativa privacy</a>
+          <div class="news-form__meta">
+            <label class="check">
+              <input type="checkbox" id="news-consent" required>
+              <span data-i18n="news.consent"></span>
+            </label>
+            <a class="text-link" href="privacy.html#newsletter" data-privacy-link data-i18n="news.privacy">Informativa privacy</a>
+          </div>
           <!-- honeypot anti-spam di Brevo: deve restare vuoto -->
           <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
           <input type="hidden" name="locale" value="it">
-          <p class="form-msg" id="news-msg" role="status" aria-live="polite"></p>
         </form>
+        <p class="form-msg newsletter__msg" id="news-msg" role="status" aria-live="polite"></p>
       </div>
     </section>
 
