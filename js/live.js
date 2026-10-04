@@ -27,6 +27,14 @@ window.KOHEI_LIVE = [
     info: "https://www.instagram.com/punkfunkpa/"
   },
   {
+    date: "2026-11-15",
+    city: "Siracusa",
+    country: "IT",
+    venue: "Taverna Il Covo",
+    tickets: null,
+    info: "https://www.instagram.com/ilcovosocialclub/"
+  },
+  {
     date: "2026-11-21",
     city: "Polistena",
     country: "IT",
