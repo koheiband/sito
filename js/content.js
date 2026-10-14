@@ -163,7 +163,7 @@ window.KOHEI_CONTENT = {
         { label: { it: "Premiere italiana", en: "Italian premiere" }, name: "Indie for Bunnies",
           url: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" },
         { label: { it: "Premiere internazionale", en: "International premiere" }, name: "Jammerzine",
-          url: null }
+          url: "https://jammerzine.com/106625-2/" }
       ]
     }
   ],
