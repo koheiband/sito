@@ -51,6 +51,7 @@ window.KOHEI_I18N = {
     "video.title": "Video",
     "video.play": "Riproduci",
     "video.soon": "Coming soon",
+    "video.soonShort": "in arrivo",
     "video.notice": "Cliccando, il video viene caricato da YouTube (youtube-nocookie.com), che riceverà il tuo indirizzo IP.",
     "video.missing": "Video non ancora disponibile.",
 
@@ -127,6 +128,7 @@ window.KOHEI_I18N = {
     "video.title": "Video",
     "video.play": "Play",
     "video.soon": "Coming soon",
+    "video.soonShort": "coming soon",
     "video.notice": "Clicking loads the video from YouTube (youtube-nocookie.com), which will receive your IP address.",
     "video.missing": "Video not available yet.",
 

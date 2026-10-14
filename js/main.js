@@ -333,6 +333,24 @@
         var still = img(v.thumb, { it: "Anteprima del video " + v.title, en: v.title + " video preview" }, 1280, 720);
         still.classList.add("video__still");
         frame.appendChild(still);
+        if (v.premieres && v.premieres.length) {
+          // bottoni sovrapposti all'anteprima, uno per premiere
+          var over = el("div", { class: "video__overlay" });
+          v.premieres.forEach(function (p) {
+            var inner = [el("span", { class: "video__btn-label", text: loc(p.label) }), el("span", { class: "video__btn-name", text: p.name })];
+            if (p.url) {
+              var a = extLink(p.url, "", "video__btn");
+              inner.forEach(function (n) { a.insertBefore(n, a.lastChild && a.lastChild.classList && a.lastChild.classList.contains("visually-hidden") ? a.lastChild : null); });
+              over.appendChild(a);
+            } else {
+              over.appendChild(el("span", { class: "video__btn is-disabled", "aria-disabled": "true" },
+                inner.concat([el("span", { class: "video__btn-soon", text: t("video.soonShort") })])));
+            }
+          });
+          frame.appendChild(over);
+          root.appendChild(el("figure", { class: "video", style: "margin:0" }, [frame, el("figcaption", { class: "video__title", text: v.title })]));
+          return;
+        }
         var soon = el("div", { class: "video__soon" }, [
           el("p", { class: "video__soon-label", text: t("video.soon") }),
           v.presave ? extLink(v.presave, t("music.presave"), "btn btn--small btn--invert") : null

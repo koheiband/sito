@@ -149,13 +149,22 @@ window.KOHEI_CONTENT = {
      Il sito mostra un solo video, a tutta larghezza: il primo della lista.                                               */
   videos: [
     {
-      /* id: null → il video non è collegato: si vede solo l'anteprima con
-         "Coming soon" e il link al presave. Quando il video diventa pubblico,
-         inserire qui il codice YouTube (es. id: "abc123XYZ").            */
-      id: "GT0pt0LPsvM",
+      /* id: null → il video non è collegato a YouTube: si vede solo l'anteprima.
+           - se ci sono "premieres", sull'anteprima compaiono i loro bottoni
+             (url: null = bottone visibile ma non cliccabile, "in arrivo");
+           - altrimenti compaiono "Coming soon" e il link al presave.
+         Quando il video diventa pubblico, inserire qui il codice YouTube
+         (es. id: "abc123XYZ"): tornano il tasto play e il player.          */
+      id: null,
       title: "Graphene Cult — Live From Casetta",
       thumb: "assets/img/video-graphene-cult-live-1280.webp",
-      presave: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release"
+      presave: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release",
+      premieres: [
+        { label: { it: "Premiere italiana", en: "Italian premiere" }, name: "Indie for Bunnies",
+          url: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" },
+        { label: { it: "Premiere internazionale", en: "International premiere" }, name: "Jammerzine",
+          url: null }
+      ]
     }
   ],
 
