@@ -59,6 +59,13 @@ window.KOHEI_CONTENT = {
      o a un sito esterno.                                                     */
   news: [
     {
+      date: "2026-10-14",
+      text: { it: "🎥 Video premiere italiana di Graphene Cult su 🇮🇹 Indie for Bunnies.",
+              en: "🎥 Italian video premiere of Graphene Cult on 🇮🇹 Indie for Bunnies." },
+      link: { label: { it: "Guarda", en: "Watch" },
+              href: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" }
+    },
+    {
       date: "2026-09-28",
       text: { it: "Il nuovo singolo Graphene Cult esce il 16 ottobre.",
               en: "New single Graphene Cult is out on 16 October." },
@@ -145,7 +152,7 @@ window.KOHEI_CONTENT = {
       /* id: null → il video non è collegato: si vede solo l'anteprima con
          "Coming soon" e il link al presave. Quando il video diventa pubblico,
          inserire qui il codice YouTube (es. id: "abc123XYZ").            */
-      id: null,
+      id: "GT0pt0LPsvM",
       title: "Graphene Cult — Live From Casetta",
       thumb: "assets/img/video-graphene-cult-live-1280.webp",
       presave: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release"
