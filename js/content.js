@@ -60,8 +60,8 @@ window.KOHEI_CONTENT = {
   news: [
     {
       date: "2026-10-14",
-      text: { it: "🎥 Video premiere italiana di Graphene Cult su 🇮🇹 Indie for Bunnies.",
-              en: "🎥 Italian video premiere of Graphene Cult on 🇮🇹 Indie for Bunnies." },
+      text: { it: "Video premiere italiana di Graphene Cult su Indie for Bunnies.",
+              en: "Italian video premiere of Graphene Cult on Indie for Bunnies." },
       link: { label: { it: "Guarda", en: "Watch" },
               href: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" }
     },
