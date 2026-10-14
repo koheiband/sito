@@ -59,6 +59,12 @@ window.KOHEI_CONTENT = {
      o a un sito esterno.                                                     */
   news: [
     {
+      date: "2026-10-15",
+      text: { it: "Premiere internazionale del video di Graphene Cult su Jammerzine.",
+              en: "International premiere of the Graphene Cult video on Jammerzine." },
+      link: { label: { it: "Guarda", en: "Watch" }, href: "https://jammerzine.com/106625-2/" }
+    },
+    {
       date: "2026-10-14",
       text: { it: "Video premiere italiana di Graphene Cult su Indie for Bunnies.",
               en: "Italian video premiere of Graphene Cult on Indie for Bunnies." },
