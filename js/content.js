@@ -59,7 +59,7 @@ window.KOHEI_CONTENT = {
      o a un sito esterno.                                                     */
   news: [
     {
-      date: "2026-10-15",
+      date: "2026-10-16",
       text: { it: "È uscito Graphene Cult, il primo singolo dall'album di debutto Everything Looks Real.",
               en: "Graphene Cult, the first single from the debut album Everything Looks Real, is out now." },
       link: { label: { it: "Ascolta", en: "Listen" }, href: "#graphene-cult" }
