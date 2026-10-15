@@ -75,7 +75,7 @@ window.KOHEI_CONTENT = {
       date: "2026-09-28",
       text: { it: "Il nuovo singolo Graphene Cult esce il 16 ottobre.",
               en: "New single Graphene Cult is out on 16 October." },
-      link: { label: { it: "Presave", en: "Pre-save" }, href: "#graphene-cult" }
+      link: { label: { it: "Ascolta", en: "Listen" }, href: "#graphene-cult" }
     }
   ],
 
@@ -101,10 +101,9 @@ window.KOHEI_CONTENT = {
          url: null → bottone visibile ma non cliccabile ("Disponibile dal …").
          Dopo l'uscita: inserire i link diretti al singolo al posto di null. */
       links: [
-        { name: "Presave",    url: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release", presave: true },
-        { name: "Spotify",    url: null },
-        { name: "Bandcamp",   url: null },
-        { name: "SoundCloud", url: null }
+        { name: "Spotify",    url: "https://open.spotify.com/album/1ZyumXdNUxtRUp5nxQSG82" },
+        { name: "Bandcamp",   url: "https://kohei.bandcamp.com/track/graphene-cult" },
+        { name: "SoundCloud", url: "https://soundcloud.com/koheiband/sets/graphene-cult-single" }
       ]
     },
     {
@@ -161,7 +160,7 @@ window.KOHEI_CONTENT = {
            - altrimenti compaiono "Coming soon" e il link al presave.
          Quando il video diventa pubblico, inserire qui il codice YouTube
          (es. id: "abc123XYZ"): tornano il tasto play e il player.          */
-      id: null,
+      id: "GT0pt0LPsvM",
       title: "Graphene Cult — Live From Casetta",
       thumb: "assets/img/video-graphene-cult-live-1280.webp",
       presave: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release",
