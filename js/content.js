@@ -60,6 +60,12 @@ window.KOHEI_CONTENT = {
   news: [
     {
       date: "2026-10-15",
+      text: { it: "È uscito Graphene Cult, il primo singolo dall'album di debutto Everything Looks Real.",
+              en: "Graphene Cult, the first single from the debut album Everything Looks Real, is out now." },
+      link: { label: { it: "Ascolta", en: "Listen" }, href: "#graphene-cult" }
+    },
+    {
+      date: "2026-10-15",
       text: { it: "Premiere internazionale del video di Graphene Cult su Jammerzine.",
               en: "International premiere of the Graphene Cult video on Jammerzine." },
       link: { label: { it: "Guarda", en: "Watch" }, href: "https://jammerzine.com/106625-2/" }
@@ -90,6 +96,7 @@ window.KOHEI_CONTENT = {
       title: "Graphene Cult",
       type: { it: "Singolo", en: "Single" },
       date: "2026-10-16",
+      released: true,   // già disponibile: niente "In uscita il …"
       cover: "assets/img/cover-graphene-cult-1200.webp",
       coverAlt: {
         it: "Copertina di Graphene Cult: illustrazione in bianco e nero di una figura con le corna, avvolta in un maglione di lana irto di spine, che balla su una gamba sola.",

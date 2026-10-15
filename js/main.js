@@ -185,7 +185,8 @@
     var root = document.getElementById("news-list");
     if (!root) return;
     root.textContent = "";
-    var list = (C.news || []).slice().sort(function (a, b) { return (a.date || "") < (b.date || "") ? 1 : -1; });
+    // più recenti in cima; a parità di data resta l'ordine scritto in content.js
+    var list = (C.news || []).slice().sort(function (a, b) { var x = a.date || "", y = b.date || ""; return x < y ? 1 : x > y ? -1 : 0; });
     document.getElementById("news").hidden = !list.length;
     list.forEach(function (n) {
       var link = null;
@@ -205,7 +206,8 @@
   function releaseStatus(r) {
     var today = todayISO();
     if (isISODate(r.date)) {
-      if (r.date > today) return { text: t("music.outOn") + " " + fmtDate(r.date, { day: "numeric", month: "long", year: "numeric" }), upcoming: true };
+      // released: true → già uscita anche se la data ufficiale non è ancora arrivata
+      if (r.date > today && !r.released) return { text: t("music.outOn") + " " + fmtDate(r.date, { day: "numeric", month: "long", year: "numeric" }), upcoming: true };
       return { text: r.date.slice(0, 4), upcoming: false };
     }
     if (r.upcoming) return { text: t("music.soon"), upcoming: true };
