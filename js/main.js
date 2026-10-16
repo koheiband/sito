@@ -254,7 +254,11 @@
       cover.classList.add("release__cover");
       var soon = r.upcoming && !isISODate(r.date);
       root.appendChild(el("article", { class: "release" + (soon ? " release--soon" : ""), id: slug(r.title) }, [
-        el("figure", { class: "release__figure" }, [cover, r.credit ? el("figcaption", null, [creditLine(r.credit)]) : null]),
+        el("figure", { class: "release__figure" }, [
+          cover,
+          r.badge ? el("span", { class: "release__badge" }, [el("span", { text: loc(r.badge) })]) : null,
+          r.credit ? el("figcaption", null, [creditLine(r.credit)]) : null
+        ]),
         body
       ]));
     });

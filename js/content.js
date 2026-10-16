@@ -97,6 +97,7 @@ window.KOHEI_CONTENT = {
       type: { it: "Singolo", en: "Single" },
       date: "2026-10-16",
       released: true,   // già disponibile: niente "In uscita il …"
+      badge: "New release",   // bollino sulla copertina; togliere la riga per nasconderlo
       cover: "assets/img/cover-graphene-cult-1200.webp",
       coverAlt: {
         it: "Copertina di Graphene Cult: illustrazione in bianco e nero di una figura con le corna, avvolta in un maglione di lana irto di spine, che balla su una gamba sola.",
