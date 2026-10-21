@@ -395,23 +395,21 @@ a.video__btn:hover { background: var(--black); color: var(--white); }
 .video__soon-label { margin: 0; font-family: var(--font-display); font-size: clamp(1.75rem, 5vw, 2.75rem); text-transform: uppercase; color: var(--white); line-height: 1; }
 .video__missing { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); padding: 1rem; text-align: center; }
 
-/* ---------- Press: una riga per articolo (stile delle news) ---------- */
-.press-list { display: grid; }
-.press-item {
-  margin: 0; padding: 1rem 0;
-  border-top: 1px solid var(--sketch);
-  display: flex; align-items: center; gap: 1rem;
-  font-size: 1.125rem;
+/* ---------- Press: testate in fila separate da "·" ---------- */
+.press-list { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 0; }
+.press-item { display: inline-flex; align-items: center; gap: .5rem; }
+/* il punto sta dopo ogni testata (tranne l'ultima): andando a capo resta in fondo alla riga */
+.press-item:not(:last-child)::after {
+  content: "·"; font-family: var(--font-display); font-size: 2.25rem; line-height: 1;
+  color: var(--black); margin: 0 .9rem 0 .2rem;
 }
-.press-item:first-child { border-top: 2px solid var(--black); }
-.press-item:last-child { border-bottom: 1px solid var(--sketch); }
 .press-item__flag { display: block; line-height: 0; flex: none; }
-.press-item__flag .flag { width: 1.9rem; height: 1.27rem; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+.press-item__flag .flag { width: 1.6rem; height: 1.07rem; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
 .press-item__link {
-  font-family: var(--font-display); font-size: 1.5rem; line-height: 1; text-transform: uppercase; color: var(--black);
-  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .2em;
+  font-family: var(--font-display); font-size: clamp(1.5rem, 3.4vw, 2.25rem); line-height: 1.1; text-transform: uppercase; color: var(--black);
+  text-decoration: none;
 }
-.press-item__link:hover { text-decoration-thickness: 4px; }
+.press-item__link:hover { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: .15em; }
 
 /* ---------- Merch: galleria di foto verticali ---------- */
 .merch-gallery {

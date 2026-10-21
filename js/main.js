@@ -418,7 +418,7 @@
     try { return new Intl.DisplayNames([lang === "it" ? "it" : "en"], { type: "region" }).of(code); }
     catch (e) { return code; }
   }
-  // una riga per articolo, come le news: bandierina · nome della testata (link)
+  // testate in fila, separate da "·": bandierina + nome della testata (link)
   function renderPress() {
     var root = document.getElementById("press-groups");
     if (!root || !C.press) return;
@@ -427,7 +427,7 @@
       var name = countryName(p.country);
       var flag = el("span", { class: "press-item__flag" + (isPlaceholder(p.country) ? " is-placeholder" : ""), role: "img", "aria-label": name, title: name });
       flag.innerHTML = flagSVG(p.country);
-      root.appendChild(el("p", { class: "press-item" }, [flag, extLink(p.url, p.outlet, "press-item__link")]));
+      root.appendChild(el("li", { class: "press-item" }, [flag, extLink(p.url, p.outlet, "press-item__link")]));
     });
   }
 
