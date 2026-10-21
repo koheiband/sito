@@ -418,17 +418,29 @@
     try { return new Intl.DisplayNames([lang === "it" ? "it" : "en"], { type: "region" }).of(code); }
     catch (e) { return code; }
   }
-  // testate in fila, separate da "·": bandierina + nome della testata (link)
+  // prima le testate con citazione (blocchi grandi), poi le altre in fila separate da "·"
+  function pressFlag(code) {
+    var name = countryName(code);
+    var f = el("span", { class: "press-item__flag" + (isPlaceholder(code) ? " is-placeholder" : ""), role: "img", "aria-label": name, title: name });
+    f.innerHTML = flagSVG(code);
+    return f;
+  }
   function renderPress() {
+    var quotes = document.getElementById("press-quotes");
     var root = document.getElementById("press-groups");
     if (!root || !C.press) return;
-    root.textContent = "";
+    root.textContent = ""; quotes.textContent = "";
     C.press.forEach(function (p) {
-      var name = countryName(p.country);
-      var flag = el("span", { class: "press-item__flag" + (isPlaceholder(p.country) ? " is-placeholder" : ""), role: "img", "aria-label": name, title: name });
-      flag.innerHTML = flagSVG(p.country);
-      root.appendChild(el("li", { class: "press-item" }, [flag, extLink(p.url, p.outlet, "press-item__link")]));
+      if (p.quote) {
+        quotes.appendChild(el("figure", { class: "press-quote" }, [
+          el("blockquote", { class: "press-quote__text", cite: p.url }, [el("p", { text: "“" + p.quote + "”" })]),
+          el("figcaption", { class: "press-quote__source" }, [pressFlag(p.country), extLink(p.url, p.outlet, "press-item__link")])
+        ]));
+      } else {
+        root.appendChild(el("li", { class: "press-item" }, [pressFlag(p.country), extLink(p.url, p.outlet, "press-item__link")]));
+      }
     });
+    quotes.hidden = !quotes.children.length;
   }
 
   /* ---------- Merch ---------- */
