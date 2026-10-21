@@ -68,7 +68,7 @@ window.KOHEI_CONTENT = {
       date: "2026-10-15",
       text: { it: "Premiere internazionale del video di Graphene Cult su Jammerzine.",
               en: "International premiere of the Graphene Cult video on Jammerzine." },
-      link: { label: { it: "Guarda", en: "Watch" }, href: "https://jammerzine.com/106625-2/" }
+      link: { label: { it: "Guarda", en: "Watch" }, href: "https://jammerzine.com/kohei-have-no-time-for-your-bullshit-on-graphene-cult/" }
     },
     {
       date: "2026-10-14",
@@ -176,7 +176,7 @@ window.KOHEI_CONTENT = {
         { label: { it: "Premiere italiana", en: "Italian premiere" }, name: "Indie for Bunnies",
           url: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" },
         { label: { it: "Premiere internazionale", en: "International premiere" }, name: "Jammerzine",
-          url: "https://jammerzine.com/106625-2/" }
+          url: "https://jammerzine.com/kohei-have-no-time-for-your-bullshit-on-graphene-cult/" }
       ]
     }
   ],
@@ -195,7 +195,7 @@ window.KOHEI_CONTENT = {
     { outlet: "Jammerzine", country: "US",
       quote: "Kōhei have no time for your bullshit on 'Graphene Cult'",
       title: "Kōhei Have No Time for Your Bullshit on 'Graphene Cult' – First Look (Video Premieres)",
-      url: "https://jammerzine.com/106625-2/" },
+      url: "https://jammerzine.com/kohei-have-no-time-for-your-bullshit-on-graphene-cult/" },
     { outlet: "Sélection Sorties", country: "FR",
       quote: "Fierce new noise rock single",
       title: "Kōhei – Graphene Cult: Fierce New Noise Rock Single",
