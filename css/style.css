@@ -396,18 +396,12 @@ a.video__btn:hover { background: var(--black); color: var(--white); }
 .video__missing { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); padding: 1rem; text-align: center; }
 
 /* ---------- Press ----------
-   in alto le citazioni delle testate principali, sotto le altre in fila
-   separate da "·". Tutto nel font dei testi. */
-.press-quotes { display: grid; gap: 2rem; margin-bottom: 2.5rem; }
-.press-quotes[hidden] { display: none; }
-@media (min-width: 900px) { .press-quotes { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
-.press-quote { margin: 0; border-top: 2px solid var(--black); padding-top: 1.25rem; display: grid; gap: 1rem; align-content: start; }
-.press-quote__text { margin: 0; }
-.press-quote__text p { margin: 0; font-size: clamp(1.35rem, 2.4vw, 1.75rem); line-height: 1.25; font-style: italic; color: var(--black); }
-.press-quote__source { display: flex; align-items: center; gap: .5rem; }
-
-.press-list { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 0; border-top: 1px solid var(--sketch); padding-top: 1.25rem; }
-.press-item { display: inline-flex; align-items: center; gap: .45rem; }
+   tutte le testate in fila separate da "·", nel font dei testi;
+   le principali hanno accanto la citazione (titolo dell'articolo). */
+.press-list { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 0; }
+.press-item { display: inline-flex; align-items: baseline; gap: .45rem; flex-wrap: wrap; }
+.press-item__flag { align-self: center; }
+.press-item__quote { font-style: italic; font-size: 1.125rem; color: var(--ink); quotes: "“" "”"; }
 /* il punto sta dopo ogni testata (tranne l'ultima): andando a capo resta in fondo alla riga */
 .press-item:not(:last-child)::after { content: "·"; font-size: 1.5rem; line-height: 1; color: var(--black); margin: 0 .8rem 0 .35rem; }
 .press-item__flag { display: block; line-height: 0; flex: none; }
