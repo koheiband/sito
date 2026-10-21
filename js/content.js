@@ -181,6 +181,34 @@ window.KOHEI_CONTENT = {
     }
   ],
 
+  /* ---------- Press ----------
+     Una riga per articolo: bandierina del paese + nome della testata (link).
+     country = sigla del paese della testata (IT, GB, US, FR, ES, DE…).
+     title = titolo originale dell'articolo (non mostrato, utile come promemoria). */
+  press: [
+    { outlet: "Vive Le Rock", country: "GB",
+      title: "KŌHEI: Oh You Sicily Thing #2",
+      url: "https://vivelerock.net/blogs/news-1/kohei-oh-you-sicily-thing-2" },
+    { outlet: "Jammerzine", country: "US",
+      title: "Kōhei Have No Time for Your Bullshit on 'Graphene Cult' – First Look (Video Premieres)",
+      url: "https://jammerzine.com/106625-2/" },
+    { outlet: "Sélection Sorties", country: "FR",
+      title: "Kōhei – Graphene Cult: Fierce New Noise Rock Single",
+      url: "https://www.selectionsorties.net/2026/10/kohei-graphene-cult-fierce-new-noise-rock-single.html" },
+    { outlet: "Revista The 13th", country: "AR",
+      title: "Single: Kōhei – Graphene Cult",
+      url: "https://revistathe13th.blogspot.com/2026/10/single-kohei-graphene-cult.html" },
+    { outlet: "Indie for Bunnies", country: "IT",
+      title: "Video: Kohei – Graphene Cult [Esclusiva IfB]",
+      url: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" },
+    { outlet: "Switch On", country: "IT",
+      title: "Kōhei: “Graphene Cult” è il nuovo brano",
+      url: "https://www.switchonmusic.it/kohei-graphene-cult-e-il-nuovo-brano/" },
+    { outlet: "Foxy Lady Ascolta", country: "IT",
+      title: "Singoli della settimana – 16 ottobre 2026",
+      url: "https://foxyladyascolta.altervista.org/singoli-della-settimana-16-ottobre-2026/" }
+  ],
+
   /* ---------- Merch ----------
      url: link del bottone (ora: messaggio diretto su Instagram, ig.me/m/<account>),
           oppure null per nascondere testo e bottone.

@@ -84,6 +84,7 @@
         <li><a href="#video" data-i18n="nav.video">Video</a></li>
         <li><a href="#musica" data-i18n="nav.music">Musica</a></li>
         <li><a href="#live" data-i18n="nav.live">Live</a></li>
+        <li><a href="#press" data-i18n="nav.press">Press</a></li>
         <li><a href="#merch" data-i18n="nav.merch">Merch</a></li>
         <li><a href="#contatti" data-i18n="nav.contact">Contatti</a></li>
       </ul>
@@ -190,8 +191,17 @@
       </div>
     </section>
 
+    <!-- ============ PRESS ============ -->
+    <!-- Contenuti da js/content.js (press): una riga per articolo con la bandiera del paese -->
+    <section class="section section--paper" id="press" aria-labelledby="press-title">
+      <div class="container">
+        <h2 class="section-title" id="press-title" data-i18n="press.title">Press</h2>
+        <div class="press-list" id="press-groups"></div>
+      </div>
+    </section>
+
     <!-- ============ MERCH ============ -->
-    <section class="section section--paper" id="merch" aria-labelledby="merch-title">
+    <section class="section section--black" id="merch" aria-labelledby="merch-title">
       <div class="container">
         <h2 class="section-title" id="merch-title" data-i18n="merch.title">Merch</h2>
         <ul class="merch-gallery" id="merch-gallery"></ul>
@@ -199,7 +209,7 @@
         <!-- testo e bottone compaiono solo se in content.js c'è il link allo store -->
         <div class="merch__store" id="merch-store" hidden>
           <p data-i18n="merch.text"></p>
-          <a class="btn btn--solid" id="merch-link" href="#"></a>
+          <a class="btn btn--invert" id="merch-link" href="#"></a>
         </div>
       </div>
     </section>

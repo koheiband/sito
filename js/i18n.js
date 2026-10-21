@@ -16,6 +16,7 @@ window.KOHEI_I18N = {
     "nav.close": "Chiudi menu",
     "nav.music": "Musica",
     "nav.live": "Live",
+    "nav.press": "Press",
     "nav.news": "News",
     "nav.video": "Video",
     "nav.merch": "Merch",
@@ -42,6 +43,7 @@ window.KOHEI_I18N = {
     "news.heading": "News",
 
     "live.title": "Live",
+    "press.title": "Press",
     "live.empty": "Nessuna data in programma. Iscriviti alla newsletter per sapere quando torniamo in giro.",
     "live.tickets": "Biglietti",
     "live.free": "Info",
@@ -93,6 +95,7 @@ window.KOHEI_I18N = {
     "nav.close": "Close menu",
     "nav.music": "Music",
     "nav.live": "Live",
+    "nav.press": "Press",
     "nav.news": "News",
     "nav.video": "Video",
     "nav.merch": "Merch",
@@ -119,6 +122,7 @@ window.KOHEI_I18N = {
     "news.heading": "News",
 
     "live.title": "Live",
+    "press.title": "Press",
     "live.empty": "No upcoming shows. Join the newsletter to hear when we hit the road again.",
     "live.tickets": "Tickets",
     "live.free": "Info",

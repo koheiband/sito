@@ -395,6 +395,24 @@ a.video__btn:hover { background: var(--black); color: var(--white); }
 .video__soon-label { margin: 0; font-family: var(--font-display); font-size: clamp(1.75rem, 5vw, 2.75rem); text-transform: uppercase; color: var(--white); line-height: 1; }
 .video__missing { position: absolute; inset: 0; display: grid; place-items: center; color: var(--white); padding: 1rem; text-align: center; }
 
+/* ---------- Press: una riga per articolo (stile delle news) ---------- */
+.press-list { display: grid; }
+.press-item {
+  margin: 0; padding: 1rem 0;
+  border-top: 1px solid var(--sketch);
+  display: flex; align-items: center; gap: 1rem;
+  font-size: 1.125rem;
+}
+.press-item:first-child { border-top: 2px solid var(--black); }
+.press-item:last-child { border-bottom: 1px solid var(--sketch); }
+.press-item__flag { display: block; line-height: 0; flex: none; }
+.press-item__flag .flag { width: 1.9rem; height: 1.27rem; display: block; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+.press-item__link {
+  font-family: var(--font-display); font-size: 1.5rem; line-height: 1; text-transform: uppercase; color: var(--black);
+  text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .2em;
+}
+.press-item__link:hover { text-decoration-thickness: 4px; }
+
 /* ---------- Merch: galleria di foto verticali ---------- */
 .merch-gallery {
   display: grid; gap: 1rem;
@@ -414,7 +432,7 @@ a.video__btn:hover { background: var(--black); color: var(--white); }
   gap: 1rem 2rem;
 }
 .merch__store[hidden] { display: none; }
-.merch__store p { font-size: 1.25rem; margin: 0; }
+.merch__store p { font-size: 1.25rem; margin: 0; color: var(--white); }
 
 /* ---------- Newsletter ---------- */
 /* Mobile: tutto in colonna. Desktop: griglia 2×2 —

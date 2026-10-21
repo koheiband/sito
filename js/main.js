@@ -392,6 +392,45 @@
     });
   }
 
+  /* ---------- Press ---------- */
+  // bandiere disegnate in SVG (le emoji non si vedono su Windows)
+  var flagN = 0;
+  function flagSVG(code) {
+    var v = '<svg class="flag" viewBox="0 0 30 20" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">';
+    switch (code) {
+      case "IT": return v + '<rect width="10" height="20" fill="#009246"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#ce2b37"/></svg>';
+      case "FR": return v + '<rect width="10" height="20" fill="#0055A4"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#EF4135"/></svg>';
+      case "ES": return v + '<rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg>';
+      case "AR": return v + '<rect width="30" height="20" fill="#74ACDF"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><circle cx="15" cy="10" r="2" fill="#F6B40E"/></svg>';
+      case "DE": return v + '<rect width="30" height="7" fill="#000"/><rect y="6.6" width="30" height="7" fill="#DD0000"/><rect y="13.3" width="30" height="6.7" fill="#FFCE00"/></svg>';
+      case "US":
+        var s = "";
+        for (var i = 0; i < 13; i++) s += '<rect y="' + (i * 20 / 13).toFixed(2) + '" width="30" height="' + (20 / 13).toFixed(2) + '" fill="' + (i % 2 ? "#fff" : "#B22234") + '"/>';
+        return v + s + '<rect width="13" height="' + (20 * 7 / 13).toFixed(2) + '" fill="#3C3B6E"/></svg>';
+      case "GB":
+        var id = "gbclip" + (++flagN);
+        return '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice"><clipPath id="' + id + '"><path d="M30,15h30v15zv15h-30zh-30v-15zv-15h30z"/></clipPath><path d="M0,0v30h60v-30z" fill="#012169"/><path d="M0,0L60,30M60,0L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0L60,30M60,0L0,30" clip-path="url(#' + id + ')" stroke="#C8102E" stroke-width="4"/><path d="M30,0v30M0,15h60" stroke="#fff" stroke-width="10"/><path d="M30,0v30M0,15h60" stroke="#C8102E" stroke-width="6"/></svg>';
+      default: return v + '<rect width="30" height="20" fill="#D4D4D4"/></svg>';
+    }
+  }
+  function countryName(code) {
+    if (isPlaceholder(code)) return code;
+    try { return new Intl.DisplayNames([lang === "it" ? "it" : "en"], { type: "region" }).of(code); }
+    catch (e) { return code; }
+  }
+  // una riga per articolo, come le news: bandierina · nome della testata (link)
+  function renderPress() {
+    var root = document.getElementById("press-groups");
+    if (!root || !C.press) return;
+    root.textContent = "";
+    C.press.forEach(function (p) {
+      var name = countryName(p.country);
+      var flag = el("span", { class: "press-item__flag" + (isPlaceholder(p.country) ? " is-placeholder" : ""), role: "img", "aria-label": name, title: name });
+      flag.innerHTML = flagSVG(p.country);
+      root.appendChild(el("p", { class: "press-item" }, [flag, extLink(p.url, p.outlet, "press-item__link")]));
+    });
+  }
+
   /* ---------- Merch ---------- */
   function renderMerch() {
     var ul = document.getElementById("merch-gallery");
@@ -490,7 +529,7 @@
   function renderAll() {
     applyStaticTexts();
     if (C) {
-      renderNews(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderContacts(); renderCredits();
+      renderNews(); renderReleases(); renderLive(); renderVideos(); renderMerch(); renderPress(); renderContacts(); renderCredits();
     }
     updateLangLinks();
     var y = document.getElementById("year");
