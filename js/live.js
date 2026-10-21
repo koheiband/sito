@@ -27,7 +27,7 @@ window.KOHEI_LIVE = [
     info: "https://www.instagram.com/punkfunkpa/"
   },
   {
-    date: "2026-11-15",
+    date: "2026-11-08",
     city: "Siracusa",
     country: "IT",
     venue: "Taverna Il Covo",
