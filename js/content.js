@@ -59,6 +59,12 @@ window.KOHEI_CONTENT = {
      o a un sito esterno.                                                     */
   news: [
     {
+      date: "2026-11-10",
+      text: { it: "È online la nostra live session registrata con Live From Casetta.",
+              en: "Our live session recorded with Live From Casetta is out now." },
+      link: { label: { it: "Guarda", en: "Watch" }, href: "#video" }
+    },
+    {
       date: "2026-10-16",
       text: { it: "È uscito Graphene Cult, il primo singolo dall'album di debutto Everything Looks Real.",
               en: "Graphene Cult, the first single from the debut album Everything Looks Real, is out now." },
@@ -162,22 +168,12 @@ window.KOHEI_CONTENT = {
      Il sito mostra un solo video, a tutta larghezza: il primo della lista.                                               */
   videos: [
     {
-      /* id: null → il video non è collegato a YouTube: si vede solo l'anteprima.
-           - se ci sono "premieres", sull'anteprima compaiono i loro bottoni
-             (url: null = bottone visibile ma non cliccabile, "in arrivo");
-           - altrimenti compaiono "Coming soon" e il link al presave.
-         Quando il video diventa pubblico, inserire qui il codice YouTube
-         (es. id: "abc123XYZ"): tornano il tasto play e il player.          */
-      id: "GT0pt0LPsvM",
-      title: "Graphene Cult — Live From Casetta",
-      thumb: "assets/img/video-graphene-cult-live-1280.webp",
-      presave: "https://distrokid.com/hyperfollow/khei1/graphene-cult?ref=release",
-      premieres: [
-        { label: { it: "Premiere italiana", en: "Italian premiere" }, name: "Indie for Bunnies",
-          url: "https://www.indieforbunnies.com/2026/10/14/video-kohei-graphene-cult-esclusiva-ifb/" },
-        { label: { it: "Premiere internazionale", en: "International premiere" }, name: "Jammerzine",
-          url: "https://jammerzine.com/kohei-have-no-time-for-your-bullshit-on-graphene-cult/" }
-      ]
+      /* id: codice YouTube del video. id: null → si vede solo l'anteprima:
+           - con "premieres" (lista di { label, name, url }) compaiono i loro bottoni;
+           - altrimenti "Coming soon" e il link "presave", se presente.          */
+      id: "tZmne72oXFI",
+      title: "Live From Casetta — live session",
+      thumb: "assets/img/video-live-from-casetta-1280.webp"
     }
   ],
 
