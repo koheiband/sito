@@ -35,7 +35,7 @@ window.KOHEI_LIVE = [
     info: "https://www.instagram.com/ilcovosocialclub/"
   },
   {
-    date: "2026-11-21",
+    date: "2027-01-30",
     city: "Polistena",
     country: "IT",
     venue: "Pulp",
